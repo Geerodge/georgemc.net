@@ -1,10 +1,3 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
- */
-
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
@@ -13,6 +6,7 @@ import Header from "./header"
 import styled from "styled-components";
 
 const LayoutStyles = styled.div`
+
   .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -24,11 +18,18 @@ const LayoutStyles = styled.div`
       "footer footer footer footer";
   }
 
-  .header { grid-area: header; }
+  .header {
+    grid-area: header;
+  }
 
-  .footer { grid-area: footer; }
+  .content { 
+    grid-area: content;
+  }
 
-  .content { grid-area: content; }
+  .footer { 
+    grid-area: footer;
+  }
+
 `;
 
 const Layout = ({ children }) => {
@@ -45,18 +46,12 @@ const Layout = ({ children }) => {
     <>
       <GlobalStyles />
       <LayoutStyles>
-      <div class="grid-container">
-        <div class="header">
-          <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-        </div>
-        <div class="content">
-          <main>{children}</main>
-        </div>
-        <div class="footer">
-          <footer>
-            © {new Date().getFullYear()} George McEntegart
-          </footer>
-        </div>
+      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+      <main className="content">{children}</main>
+      <div className="footer">
+        <footer>
+          © {new Date().getFullYear()} George McEntegart
+        </footer>
       </div>
       </LayoutStyles>
     </>
