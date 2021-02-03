@@ -83,7 +83,7 @@ const HeaderStyles = styled.div`
 
 const listItems = [
   { link: "#about", name: "About" },
-  { link: "#cv", name: "Curriculum Vitae" },
+  { link: "#projects", name: "Projects" },
   { link: "#contact", name: "Contact" }
 ];
 

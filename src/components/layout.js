@@ -14,7 +14,6 @@ const LayoutStyles = styled.div`
     grid-template-rows: 1fr 1fr 1fr;
     gap: 0px 0px;
     grid-template-areas:
-      "header header header header"
       ". content content ."
       "footer footer footer footer";
   }
@@ -48,8 +47,10 @@ const Layout = ({ children }) => {
       <GlobalStyles />
       <LayoutStyles>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <main className="content">{children}</main>
-      <Footer />
+      <div className="grid-container">
+        <main className="content">{children}</main>
+        <Footer />
+      </div>
       </LayoutStyles>
     </>
   )

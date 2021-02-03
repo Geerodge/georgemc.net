@@ -5,7 +5,7 @@ import "@fontsource/montserrat/500.css";
 import "fontsource-open-sans";
 
 const GlobalStyles = createGlobalStyle`
-    :root {
+  :root {
     --red: #FF4949;
     --black: #2E2E2E;
     --yellow: #ffc600;
@@ -14,21 +14,16 @@ const GlobalStyles = createGlobalStyle`
     --green: #599b44;
   }
   html {
-    ${'' /* background-image: url(${bg}); */}
-    background-attachment: fixed;
     font-size: 10px;
   }
-
   body {
     font-size: 2rem;
     font-family: 'Open Sans', sans-serif;
     -webkit-font-smoothing: antialiased;
   }
-
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
   }
-
 `;
 
 export default GlobalStyles;
