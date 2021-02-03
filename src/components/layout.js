@@ -4,6 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import GlobalStyles from "../styles/GlobalStyles";
 import Header from "./header"
 import styled from "styled-components";
+import Footer from "./Footer";
 
 const LayoutStyles = styled.div`
 
@@ -48,11 +49,7 @@ const Layout = ({ children }) => {
       <LayoutStyles>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <main className="content">{children}</main>
-      <div className="footer">
-        <footer>
-          © {new Date().getFullYear()} George McEntegart
-        </footer>
-      </div>
+      <Footer />
       </LayoutStyles>
     </>
   )
