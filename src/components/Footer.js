@@ -6,6 +6,7 @@ import { SiMinutemailer } from 'react-icons/si';
 const FooterStyles = styled.div`
     text-align: center;
     margin: 25px;
+    line-height: 1.75;
     .icons {
         color: black;
         margin-top: 10px;
@@ -21,7 +22,6 @@ const FooterStyles = styled.div`
 
 function Footer() {
     return (
-        <>
         <div className="footer">
         <FooterStyles>
             <footer>
@@ -39,9 +39,8 @@ function Footer() {
                 <SiMinutemailer className="icons" />
             </a>
             </footer>
-            </FooterStyles>
+        </FooterStyles>
         </div>
-        </>
     )
 }
 
