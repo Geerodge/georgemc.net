@@ -97,9 +97,9 @@ const IndexPage = () => (
     <p>I'm a developer with a <span className="highlight">passion for building and learning</span> new things.</p>
     {/* Figure out how to stop the text being deleted after the loop ends and add to GitHub repo - https://github.com/adrianmcli/react-rotating-text/ */}
   </div>
-    <h2 id="about">About</h2>
     <div className="content-container">
       <div className="item-1">
+        <h2 id="about">About</h2>
         <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
       </div>
       <div className="item-2">
@@ -112,20 +112,34 @@ const IndexPage = () => (
     <h2 id="projects">Projects</h2>
     <div className="content-container">
       <div className="item-1">
+          <h3>Cheeky Tea</h3>
         <ul>
-          <li>Cheeky Tea</li>
-          <li>Description:</li>
-          <li>Built with:</li>
-          <li>Demo: </li>
+          <li>Description: An online tea store and wholesale tea supplier</li>
+          <li>Built with: Gatsby, Sanity</li>
+          <li><a href="https://cheekytea.co.uk" target="_blank" rel="noreferrer noopener">Live Site</a></li>
+          <li>View an old <a href="https://cheekytea.georgemc.net" target="_blank" rel="noreferrer noopener">demo version here</a>, built on WordPress with WooCommerce</li>
         </ul>
       </div>
       <div className="item-2">
+          <h3>Sunny Worthing</h3>
         <ul>
-          <li>Sunny Worthing</li>
-          <li>Description:</li>
-          <li>Built with:</li>
-          <li>Demo: </li>
+          <li>Description: A website promoting Worthing and the Sussex areas</li>
+          <li>Built with: WordPress, Elementor</li>
+          <li><a href="https://sunnyworthing.co.uk" target="_blank" rel="noreferrer noopener">Live Website</a></li>
         </ul>
+      </div>
+    </div>
+    <div className="content-container">
+      <div className="item-1">
+          <h3>The Tree Planters</h3>
+        <ul>
+          <li>Description: A UK tree planting charity that I'm involved with</li>
+          <li>Built with: Wordpress, customised theme <a GeneratePress href="https://generatepress.com/" target="_blank" rel="noreferrer noopener">GeneratePress</a></li>
+          <li><a href="http://thetreeplanters.georgemc.net" target="_blank" rel="noreferrer noopener">Demo Website</a></li>
+        </ul>
+      </div>
+      <div className="item-2">
+          <h3>More soon...</h3>
       </div>
     </div>
     <h2 id="contact">Contact</h2>
@@ -135,7 +149,7 @@ const IndexPage = () => (
       <li><strong>Phone:</strong> +44 7899 890 634</li>
       <li><strong>Location:</strong> United Kingdom</li>
     </ul>
-    <a href="#" class="button">Download CV</a>
+    <a href="#" className="button">Download CV</a>
   </RotatingTextStyles>
   </Layout>
 )
