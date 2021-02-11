@@ -31,7 +31,10 @@ const RotatingTextStyles = styled.div`
     grid-template-rows:  1fr;
     gap: 50px;
     grid-template-areas:
-      "item-1 item-2"
+      "item-1 item-2";
+    h3 {
+      margin-bottom: 0;
+    }
   }
 
   .item-1 {
@@ -82,6 +85,30 @@ const RotatingTextStyles = styled.div`
     font-size: 2rem;
     margin-top: 25px;
   }
+
+
+  /* Mobile CSS */
+
+    /* For devices with width of 480px and less, like phones */
+    @media only screen and (max-width: 480px) {
+      margin: 10%;
+      .content-container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "item-1"
+        "item-2";
+      }
+      h1 {
+        font-size: 5rem;
+        line-height: 1;
+      }
+      .intro {
+        margin-bottom: 0;
+      }
+      .love {
+        font-size: 2rem;
+      }
+  } 
   
 `;
 
@@ -95,6 +122,7 @@ const IndexPage = () => (
     <h1>Hi, I'm George</h1>
     <h3>Thanks for stopping by...</h3>
     <p>I'm a developer with a <span className="highlight">passion for building and learning</span> new things.</p>
+    <p className="love">Things I ❤️ <ReactRotatingText items={[`Open Source`, `Nature`, `Web 3.0`, `Music`,`Cryptocurrency`, `Learning and building new things`, `Dogs`]} eraseMode="erase" pause={2000} /></p>
     {/* Figure out how to stop the text being deleted after the loop ends and add to GitHub repo - https://github.com/adrianmcli/react-rotating-text/ */}
   </div>
     <div className="content-container">
@@ -108,11 +136,11 @@ const IndexPage = () => (
         </div>
       </div>
     </div>
-    <h3 className="love">Things I ❤️ <ReactRotatingText items={[`Open Source`, `Nature`, `Web 3.0`, `Music`,`Cryptocurrency`, `Learning and building new things`, `Dogs`]} eraseMode="erase" pause={2000} /></h3>
     <h2 id="projects">Projects</h2>
     <div className="content-container">
       <div className="item-1">
           <h3>Cheeky Tea</h3>
+          <hr />
         <ul>
           <li>Description: An online tea store and wholesale tea supplier</li>
           <li>Built with: Gatsby, Sanity</li>
@@ -122,6 +150,7 @@ const IndexPage = () => (
       </div>
       <div className="item-2">
           <h3>Sunny Worthing</h3>
+          <hr />
         <ul>
           <li>Description: A website promoting Worthing and the Sussex areas</li>
           <li>Built with: WordPress, Elementor</li>
@@ -132,6 +161,7 @@ const IndexPage = () => (
     <div className="content-container">
       <div className="item-1">
           <h3>The Tree Planters</h3>
+          <hr />
         <ul>
           <li>Description: A UK tree planting charity that I'm involved with</li>
           <li>Built with: Wordpress, customised theme <a GeneratePress href="https://generatepress.com/" target="_blank" rel="noreferrer noopener">GeneratePress</a></li>
@@ -140,6 +170,7 @@ const IndexPage = () => (
       </div>
       <div className="item-2">
           <h3>More soon...</h3>
+          <hr />
       </div>
     </div>
     <h2 id="contact">Contact</h2>
