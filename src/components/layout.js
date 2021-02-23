@@ -40,13 +40,13 @@ const LayoutStyles = styled.div`
   } 
 
   /* For devices with width between 481px and 768px, like larger phones and portrait tablets */
-  @media only screen and (min-width: 481px) {...} 
+  @media only screen and (min-width: 481px) {} 
 
   /* For devices with width between 769px and 1279px, like landscape tablets and laptops */
-  @media only screen and (min-width: 769px) {...} 
+  @media only screen and (min-width: 769px) {} 
 
   /* For devices with width of 1280px and more, like desktop computers */
-  @media only screen and (min-width: 1280px) {...}
+  @media only screen and (min-width: 1280px) {}
 
 `;
 
