@@ -98,7 +98,7 @@ const Header = ({ siteTitle }) => (
       <ul className="headerMenu">
         {listItems.map(item => (
           <li>
-            <a href={item.link}>{item.name}</a>
+            <a target="_blank" rel="noreferrer" href={item.link}>{item.name}</a>
           </li>
         ))}
       </ul>

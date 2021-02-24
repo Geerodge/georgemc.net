@@ -106,7 +106,7 @@ const Projects = () => (
             <h3>The Tree Planters</h3>
             <p>A UK tree planting charity that I'm involved with.</p>
             <ul>
-                <li>Built with Wordpress, customised theme <a GeneratePress href="https://generatepress.com/" target="_blank" rel="noreferrer noopener">GeneratePress</a></li>
+                <li>Built with Wordpress, customised theme <a href="https://generatepress.com/" target="_blank" rel="noreferrer noopener">GeneratePress</a></li>
                 <li><a href="http://thetreeplanters.georgemc.net" target="_blank" rel="noreferrer noopener">Demo Website</a></li>
             </ul>
         </div>

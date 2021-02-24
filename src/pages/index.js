@@ -61,10 +61,11 @@ const IndexStyles = styled.div`
     max-width: 10%;
     background-color: #e7e7e7; 
     color: black;
-    padding: 20px 32px;
+    padding: 20px 15px;
     text-decoration: none;
     font-size: 2rem;
     margin-top: 30px;
+    text-align: center;
     &:hover {
       background-color: #f3f3f3;
     }
@@ -153,6 +154,11 @@ const IndexStyles = styled.div`
         padding-left: 20px;
       }
     }
+    .button {
+      max-width: 50%;
+      margin: 4rem auto;
+      text-align: center;
+    }
   }
   /* For devices with width between 481px and 768px, like larger phones and portrait tablets */
   @media only screen and (min-width: 481px) {
@@ -180,7 +186,7 @@ const IndexPage = () => (
           <div className="intro">
             <h1>Hi, I'm George</h1>
             <h3>Thanks for stopping by...</h3>
-            <p>I'm a developer <span className="highlight">using JavaScript, React, Gatsby and Next.js</span>. I'm always interested in new opportunities, grab my CV here.</p>
+            <p>I'm a developer <span className="highlight">using JavaScript, React, Gatsby and Next.js</span>. I'm always interested in new opportunities, <a href="https://www.notion.so/George-McEntegart-54f946adb15d4ababfad7b490f1183ff" target="_blank" rel="noreferrer">check out my CV here</a>.</p>
           </div>
         </div>
         <div className="item-2">
@@ -202,7 +208,7 @@ const IndexPage = () => (
           <li><strong>Phone:</strong> +44 7899 890 634</li>
           <li><strong>Location:</strong> United Kingdom</li>
         </ul>
-        <a className="button" href="#">Download CV</a>
+        <a className="button" href="https://www.notion.so/George-McEntegart-54f946adb15d4ababfad7b490f1183ff" target="_blank" rel="noreferrer">View CV</a>
       </div>
     </article>
   </IndexStyles>

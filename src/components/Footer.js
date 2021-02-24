@@ -57,10 +57,10 @@ function Footer() {
             <a href="https://www.linkedin.com/in/georgemcentegart/" target="_blank" rel="noreferrer">
                 <FaLinkedin className="icons" />
             </a>
-            <a href="https://www.instagram.com/geerodge">
+            <a href="https://www.instagram.com/geerodge" target="_blank" rel="noreferrer">
                 <FaInstagram className="icons" />
             </a>
-            <a href="https://steamcommunity.com/id/Geerodge">
+            <a href="https://steamcommunity.com/id/Geerodge" target="_blank" rel="noreferrer">
                 <FaSteam className="icons" />
             </a>
             <a href="mailto:geerodge@gmail.com">
