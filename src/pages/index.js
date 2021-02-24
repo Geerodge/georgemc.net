@@ -41,8 +41,13 @@ const IndexStyles = styled.div`
   h3 {
     font-size: 3rem;
   }
-  .contact {
+  .gatsby-image-wrapper {
+    margin: 0 auto;
+  }
+  .contact-container {
+    ul {
     margin-top: 25px;
+    }
   }
   .highlight {
     background-color: #fff2ac;
@@ -52,14 +57,14 @@ const IndexStyles = styled.div`
     margin: 0 0 100px 0;
   }
   .button {
+    display: block;
+    max-width: 10%;
     background-color: #e7e7e7; 
     color: black;
-    border: none;
     padding: 20px 32px;
-    text-align: center;
     text-decoration: none;
     font-size: 2rem;
-    margin-top: 25px;
+    margin-top: 30px;
     &:hover {
       background-color: #f3f3f3;
     }
@@ -109,23 +114,59 @@ const IndexStyles = styled.div`
   /* Mobile CSS */
   /* For devices with width of 480px and less, like phones */
   @media only screen and (max-width: 480px) {
-    margin: 10%;
     .content-container {
       grid-template-columns: 1fr;
       grid-template-areas:
       "item-1"
-      "item-2";
+      "item-2"
+      "item-3"
+      "item-4";
+      
+      margin: 5%;
+
+      .item-2 {
+        margin-right: 0;
+      }
+      .item-3 {
+        margin-top: 50px;
+        margin-bottom: 50px;
+      }
     }
-    h1 {
-      font-size: 5rem;
-      line-height: 1;
-    }
+
+    /* Main Content */
     .intro {
-      margin-bottom: 0;
+      margin: 0;
+      h1 {
+        font-size: 4.5rem;
+        line-height: 1;
+      }
+      h2 {
+        font-size: 3rem;
+      }
+      h3 {
+        font-size: 2rem;
+      }
     }
-    .love {
-      font-size: 2rem;
+    .contact-container {
+      margin: 5%;
+      ul {
+        padding-left: 20px;
+      }
     }
+  }
+  /* For devices with width between 481px and 768px, like larger phones and portrait tablets */
+  @media only screen and (min-width: 481px) {
+
+  } 
+
+  /* For devices with width between 769px and 1279px, like landscape tablets and laptops */
+  @media only screen and (min-width: 769px) {
+
+  } 
+
+  /* For devices with width of 1280px and more, like desktop computers */
+  @media only screen and (min-width: 1280px) {
+
   }
 `;
 
@@ -153,16 +194,16 @@ const IndexPage = () => (
         </div>
       </div>
       <Projects />
-      <h2 id="contact">Contact</h2>
-      <p>If you need a developer for your new or on-going project, feel free to contact me.</p>
-      <ul className="contact">
-        <li><strong>Email:</strong> geerodge@gmail.com</li>
-        <li><strong>Phone:</strong> +44 7899 890 634</li>
-        <li><strong>Location:</strong> United Kingdom</li>
-      </ul>
-      <a href="#">
-        <button className="button">Download CV</button>
-      </a>
+      <div className="contact-container">
+        <h2>Contact</h2>
+        <p>If you need a developer, please feel free to contact me.</p>
+        <ul>
+          <li><strong>Email:</strong> geerodge@gmail.com</li>
+          <li><strong>Phone:</strong> +44 7899 890 634</li>
+          <li><strong>Location:</strong> United Kingdom</li>
+        </ul>
+        <a className="button" href="#">Download CV</a>
+      </div>
     </article>
   </IndexStyles>
   </Layout>

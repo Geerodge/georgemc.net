@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { FaGithub, FaTwitter, FaLinkedin } from 'react-icons/fa';
+import { FaGithub, FaTwitter, FaLinkedin, FaSteam, FaInstagram } from 'react-icons/fa';
 import { SiMinutemailer } from 'react-icons/si';
 import ReactRotatingText from "react-rotating-text";
 
@@ -45,7 +45,7 @@ function Footer() {
         <div className="footer">
         <FooterStyles>
             <footer>
-            <p className="love">Things I &#x2764;&#xFE0F; <ReactRotatingText items={[`Open Source`, `Nature`, `Web 3.0`, `Music`,`Cryptocurrency`, `Learning and building new things`, `Dogs`]} eraseMode="erase" pause={2000} /></p>
+            <p className="love">Things I &#x2764;&#xFE0F; <ReactRotatingText items={[`Open Source`, `Nature`, `Web 3.0`, `Music`,`Cryptocurrency`, `Learning and building new things`, `Dogs`, `The Beach`, `Gaming`]} eraseMode="erase" pause={2000} /></p>
             {/* Figure out how to stop the text being deleted after the loop ends and add to GitHub repo - https://github.com/adrianmcli/react-rotating-text/ */}
             © {new Date().getFullYear()} George McEntegart<br />
             <a href="https://github.com/Geerodge" target="_blank" rel="noreferrer">
@@ -56,6 +56,12 @@ function Footer() {
             </a>
             <a href="https://www.linkedin.com/in/georgemcentegart/" target="_blank" rel="noreferrer">
                 <FaLinkedin className="icons" />
+            </a>
+            <a href="https://www.instagram.com/geerodge">
+                <FaInstagram className="icons" />
+            </a>
+            <a href="https://steamcommunity.com/id/Geerodge">
+                <FaSteam className="icons" />
             </a>
             <a href="mailto:geerodge@gmail.com">
                 <SiMinutemailer className="icons" />

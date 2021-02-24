@@ -19,6 +19,10 @@ const HeaderStyles = styled.div`
     display: flex;
     /* to have logo on the left and links on the right */
     justify-content: space-between;
+    align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
     a {
       color: inherit;
     }
@@ -82,9 +86,9 @@ const HeaderStyles = styled.div`
 `;
 
 const listItems = [
-  { link: "#about", name: "About" },
-  { link: "#projects", name: "Projects" },
-  { link: "#contact", name: "Contact" }
+  { link: "https://github.com/Geerodge", name: "GitHub" },
+  { link: "https://twitter.com/geerodge", name: "Twitter" },
+  { link: "https://www.linkedin.com/in/georgemcentegart", name: "LinkedIn" }
 ];
 
 const Header = ({ siteTitle }) => (
