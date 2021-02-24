@@ -186,7 +186,7 @@ const IndexPage = () => (
           <div className="intro">
             <h1>Hi, I'm George</h1>
             <h3>Thanks for stopping by...</h3>
-            <p>I'm a developer <span className="highlight">using JavaScript, React, Gatsby and Next.js</span>. I'm always interested in new opportunities, <a href="https://www.notion.so/George-McEntegart-54f946adb15d4ababfad7b490f1183ff" target="_blank" rel="noreferrer">check out my CV here</a>.</p>
+            <p>I'm a developer <span className="highlight">using JavaScript, React, Gatsby and Express</span>. I'm always interested in new opportunities, <a href="https://www.notion.so/George-McEntegart-54f946adb15d4ababfad7b490f1183ff" target="_blank" rel="noreferrer">check out my CV here</a>.</p>
           </div>
         </div>
         <div className="item-2">
