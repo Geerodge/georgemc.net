@@ -7,64 +7,48 @@ import Projects from "../components/Projects";
 
 const IndexStyles = styled.div`
 
+.content-container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "item-1"
+    "item-2"
+    "item-3"
+    "item-4";
+    .item-2 {
+      margin-right: 0;
+    }
+    .item-3 {
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+    margin: 5%;
+  }
+
+  /* Main Styles */
   line-height: 1.75;
 
-  .content-container {
-    display: grid;
-    grid-template-columns:  1fr 1fr 1fr 1fr;
-    grid-template-rows:  1fr;
-    grid-template-areas:
-      "item-1 item-1 item-1 item-1"
-      "item-2 item-2 item-3 item-3";
-    h3 {
-      margin-bottom: 0;
-    }
-  }
-  .item-1 {
-    grid-area: item-1;
-  }
-  .item-2 {
-    grid-area: item-2;
-    margin-right: 4rem;
-  }
-  .item-3 {
-    grid-area: item-3;
-  }
-
-   /* Main Styles */
-  h1 {
-    font-size: 6rem;
-  }
-  h2 {
-    font-size: 4rem;
-  }
-  h3 {
-    font-size: 3rem;
-  }
   .gatsby-image-wrapper {
     margin: 0 auto;
-  }
-  .contact-container {
-    ul {
-    margin-top: 25px;
-    }
   }
   .highlight {
     background-color: #fff2ac;
     background-image: linear-gradient(to right, #ffe359 0%, #fff2ac 100%);
   }
-  .intro {
-    margin: 0 0 100px 0;
+  .contact-container {
+    margin: 5%;
+    ul {
+      padding-left: 20px;
+    }
   }
   .button {
     display: block;
-    max-width: 10%;
+    max-width: 50%;
     background-color: #e7e7e7; 
     color: black;
     padding: 20px 15px;
     text-decoration: none;
     font-size: 2rem;
-    margin-top: 30px;
+    margin: 4rem auto;
     text-align: center;
     &:hover {
       background-color: #f3f3f3;
@@ -110,69 +94,102 @@ const IndexStyles = styled.div`
     100% {
       border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
     }
-  };
+  }
 
   /* Mobile CSS */
   /* For devices with width of 480px and less, like phones */
-  @media only screen and (max-width: 480px) {
-    .content-container {
-      grid-template-columns: 1fr;
-      grid-template-areas:
-      "item-1"
-      "item-2"
-      "item-3"
-      "item-4";
-      
-      margin: 5%;
-
-      .item-2 {
-        margin-right: 0;
-      }
-      .item-3 {
-        margin-top: 50px;
-        margin-bottom: 50px;
-      }
-    }
-
-    /* Main Content */
-    .intro {
-      margin: 0;
-      h1 {
-        font-size: 4.5rem;
-        line-height: 1;
-      }
-      h2 {
-        font-size: 3rem;
-      }
-      h3 {
-        font-size: 2rem;
-      }
-    }
-    .contact-container {
-      margin: 5%;
-      ul {
-        padding-left: 20px;
-      }
-    }
-    .button {
-      max-width: 50%;
-      margin: 4rem auto;
-      text-align: center;
-    }
+  @media only screen
+    and (max-width: 480px) {
   }
-  /* For devices with width between 481px and 768px, like larger phones and portrait tablets */
-  @media only screen and (min-width: 481px) {
 
-  } 
+  /* For devices with width between 481px and 768px, like larger phones and portrait tablets */
+   @media only screen
+    and (min-width: 481px) {
+   }
 
   /* For devices with width between 769px and 1279px, like landscape tablets and laptops */
-  @media only screen and (min-width: 769px) {
+  @media only screen
+    and (min-width: 769px) {
 
-  } 
+    .content-container {
+      display: grid;
+      grid-template-columns:  1fr 1fr 1fr 1fr;
+      grid-template-rows:  1fr;
+      grid-template-areas:
+        "item-1 item-1 item-1 item-1"
+        "item-2 item-2 item-3 item-3";
+    }
+    .item-1 {
+      grid-area: item-1;
+    }
+    .item-2 {
+      grid-area: item-2;
+    }
+    .item-3 {
+      grid-area: item-3;
+    }
+
+    /* Main Styles */
+    h1 {
+      font-size: 300%;
+    }
+    h2 {
+      font-size: 200%;
+    }
+    h3 {
+      font-size: 150%;
+    }
+
+    .gatsby-image-wrapper {
+      margin-top: 75px;
+    }
+
+    .button {
+      width: 25%;
+    }
+  }
 
   /* For devices with width of 1280px and more, like desktop computers */
-  @media only screen and (min-width: 1280px) {
+  @media only screen 
+    and (min-width: 1280px) {
 
+      .content-container {
+        margin-bottom: 0px;
+      }
+      .item-2 {
+        margin-top: 75px;
+      }
+
+      .button {
+        width: 20%;
+        margin: 0;
+      }
+
+      /* Image Effect */
+      .morphing {
+        max-width: 70%
+      }
+  }
+
+    /* For devices with width of 1280px and more, like desktop computers */
+    @media only screen 
+    and (min-width: 2300px) {
+
+      .content-container {
+        margin-bottom: -85px;
+      }
+      .item-1 {
+        margin-bottom: 15px;
+      }
+
+      .button {
+        width: 15%;
+        margin: 0;
+      }
+
+      .gatsby-image-wrapper {
+        margin-top: 0px;
+      }
   }
 `;
 
@@ -186,7 +203,7 @@ const IndexPage = () => (
           <div className="intro">
             <h1>Hi, I'm George</h1>
             <h3>Thanks for stopping by...</h3>
-            <p>I'm a developer <span className="highlight">using JavaScript, React, Gatsby and Express</span>. I'm always interested in new opportunities, <a href="https://www.notion.so/George-McEntegart-54f946adb15d4ababfad7b490f1183ff" target="_blank" rel="noreferrer">check out my CV here</a>.</p>
+            <p>I'm a software engineer <span className="highlight">using JavaScript, React, Express, Gatsby.js and Next.js</span>. I'm always interested in new opportunities, <a href="https://www.notion.so/George-McEntegart-54f946adb15d4ababfad7b490f1183ff" target="_blank" rel="noreferrer">check out my CV here</a>.</p>
           </div>
         </div>
         <div className="item-2">

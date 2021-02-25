@@ -3,79 +3,80 @@ import styled from "styled-components";
 
 const ProjectStyles = styled.div`
 
-  margin-top: 0px;
-  margin-bottom: 100px;
+  margin: 5%;
 
   .project-container {
     display: grid;
-    grid-template-columns:  1fr 1fr 1fr 1fr;
+    grid-template-columns:  1fr;
     grid-template-rows:  1fr;
-    gap: 25px;
+    gap: 0;
     grid-template-areas:
-      "item-1 item-1 item-2 item-2"
-      "item-3 item-3 item-4 item-4";
-  }
-  .item-1 {
-    grid-area: item-1;
-  }
-  .item-2 {
-    grid-area: item-2;
-  }
-  .item-3 {
-    grid-area: item-3;
-  }
-  .item-4 {
-    grid-area: item-4;
+      "item-1"
+      "item-2"
+      "item-3"
+      "item-4";
+    .item-2 {
+      margin-right: 0;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
   }
 
   /* Underline Effect */
   p:first-child:before {
-    display: none;
   }
   p:before {
-      content: " ";
-      border: 1px solid black;
-      margin-top: 15px;
-      margin-bottom: 15px;
-      display: block;
-      max-width: 100px;
+    content: " ";
+    border: 1px solid black;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: block;
+    max-width: 100px;
   }
 
   /* Mobile CSS */
   /* For devices with width of 480px and less, like phones */
   @media only screen and (max-width: 480px) {
-    margin: 5%;
+  }
+
+  /* For devices with width between 481px and 768px, like larger phones and portrait tablets */
+  @media only screen and (min-width: 481px) {
+  } 
+
+  /* For devices with width between 769px and 1279px, like landscape tablets and laptops */
+  @media only screen and (min-width: 769px) {
+  }
+
+  /* For devices with width of 1280px and more, like desktop computers */
+  @media only screen and (min-width: 1280px) {
 
     .project-container {
       display: grid;
-      grid-template-columns:  1fr;
+      grid-template-columns:  1fr 1fr 1fr 1fr;
       grid-template-rows:  1fr;
-      gap: 0;
+      gap: 50px;
       grid-template-areas:
-        "item-1"
-        "item-2"
-        "item-3"
-        "item-4";
-
-      ul {
-        padding-left: 20px;
-      }
-
-      .item-2 {
-        margin-right: 0;
-      }
+        "item-1 item-1 item-2 item-2"
+        "item-3 item-3 item-4 item-4";
     }
-  }
-  /* For devices with width between 481px and 768px, like larger phones and portrait tablets */
-  @media only screen and (min-width: 481px) {
-
-  } 
-  /* For devices with width between 769px and 1279px, like landscape tablets and laptops */
-  @media only screen and (min-width: 769px) {
-
-  } 
-  /* For devices with width of 1280px and more, like desktop computers */
-  @media only screen and (min-width: 1280px) {
+    .item-1 {
+      grid-area: item-1;
+      padding: 20px;
+    }
+    .item-2 {
+      grid-area: item-2;
+      padding: 20px;
+    }
+    .item-3 {
+      grid-area: item-3;
+      padding: 20px;
+    }
+    .item-4 {
+      grid-area: item-4;
+      padding: 20px;
+    }
 
   }
 `;
