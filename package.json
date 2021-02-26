@@ -5,7 +5,7 @@
   "version": "0.1.0",
   "author": "George McEntegart <geerodge@gmail.com>",
   "dependencies": {
-    "@fontsource/montserrat": "^4.1.0",
+    "@fontsource/montserrat": "^4.2.1",
     "@fontsource/mulish": "^4.1.1",
     "@fontsource/open-sans": "^4.2.1",
     "@fontsource/quicksand": "^4.1.1",
