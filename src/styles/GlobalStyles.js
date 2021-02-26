@@ -2,7 +2,7 @@ import { createGlobalStyle } from 'styled-components';
 import "normalize.css";
 
 import "@fontsource/montserrat/500.css";
-import "fontsource-open-sans";
+import "@fontsource/open-sans";
 
 const GlobalStyles = createGlobalStyle`
   :root {
