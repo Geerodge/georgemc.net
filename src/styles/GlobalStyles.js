@@ -1,8 +1,8 @@
 import { createGlobalStyle } from 'styled-components';
 import "normalize.css";
 
-import "@fontsource/montserrat/500.css";
-import "@fontsource/open-sans";
+// import "@fontsource/montserrat/500.css";
+// import "@fontsource/open-sans";
 
 const GlobalStyles = createGlobalStyle`
   :root {
@@ -18,11 +18,13 @@ const GlobalStyles = createGlobalStyle`
   }
   body {
     font-size: 2rem;
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
+    src: url("../fonts/OpenSans-Regular.ttf");
     -webkit-font-smoothing: antialiased;
   }
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
+    src: url("../fonts/Montserrat-Regular.ttf");
   }
 `;
 
