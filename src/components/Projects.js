@@ -92,7 +92,7 @@ const Projects = () => (
             <ul>
                 <li>Built with Gatsby, Sanity</li>
                 {/* <li><a href="https://cheekytea.co.uk" target="_blank" rel="noreferrer noopener">Live Site</a></li> */}
-                <li><a href="https://cheekytea.co.uk" target="_blank" rel="noreferrer noopener"><em>Site Coming Soon</em></a></li>
+                <li><em>Site Coming Soon</em></li>
                 <li>View an old <a href="https://cheekytea.georgemc.net" target="_blank" rel="noreferrer noopener">demo version here</a>, built on WordPress with WooCommerce</li>
             </ul>
         </div>
