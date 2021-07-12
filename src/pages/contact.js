@@ -15,7 +15,7 @@ const ContactPage = () => (
   <Layout>
     <ContactPageStyles>
       <SEO title="Home" />
-      <h1>Say Hello 👋</h1>
+      <h1>Say Hello <span role="img" aria-label="Hand Waving">👋</span></h1>
       <p>Fill out the form below and I'll be in touch as soon as possible.</p>
       <p>Alternatively, call me to discuss your requirements on <strong>07899 890634</strong>.</p>
       <ContactForm />
