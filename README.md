@@ -1,4 +1,4 @@
-# Cheeky Tea
+# georgemc.net
 
 My basic personal website. Visit [https://georgemc.net/](https://georgemc.net/).
 
