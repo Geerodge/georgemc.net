@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components";
 import GlobalStyles from "../styles/GlobalStyles";
-import Header from "../components/Header";
+import Header from "./Header";
 import Footer from "./Footer";
 
 const LayoutStyles = styled.div`
