@@ -22,9 +22,6 @@ module.exports = {
         name: `George McEntegart`,
         short_name: `George McEntegart`,
         start_url: `/`,
-        background_color: `ForestGreen`,
-        theme_color: `ForestGreen`,
-        display: `minimal-ui`,
         icon: `src/images/favicon.png`, // This path is relative to the root of the site.
       },
     },
