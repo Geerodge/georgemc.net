@@ -42,7 +42,7 @@ Built using React, Gatsby and Sanity, with Snipcart for Ecommerce/shopping cart.
 
 ## Authors
 
-***George McEntegart** - [Website](https://georgemc.net/)
+**George McEntegart** - [Website](https://georgemc.net/)
 
 ## License
 
