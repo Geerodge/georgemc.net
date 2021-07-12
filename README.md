@@ -1,4 +1,4 @@
-# georgemc.net
+# George McEntegart
 
 My basic personal website. Visit [https://georgemc.net/](https://georgemc.net/).
 
