@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 import styled from "styled-components";
 import Cheekytea from "../Images/Cheekytea";
 import Housebuyfast from "../Images/Housebuyfast";

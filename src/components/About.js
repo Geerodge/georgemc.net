@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import ImageMorph from "../components/ImageMorph";
+import ImageMorph from "./ImageMorph";
 
 const AboutStyles = styled.div`
 
