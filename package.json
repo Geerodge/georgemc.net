@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "georgemc.net",
   "private": true,
-  "description": "My simple portfolio website",
+  "description": "Simple website",
   "version": "0.1.0",
   "author": "George McEntegart <geerodge@gmail.com>",
   "dependencies": {
