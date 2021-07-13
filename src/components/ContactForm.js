@@ -13,7 +13,13 @@ const ContactFormStyles = styled.div`
         margin: 3em auto;
         textarea {
             min-height: 5em;
-            resize: none
+            resize: none;
+            color: var(--white);
+        }
+        ::placeholder,
+        :-ms-input-placeholder,
+        ::-ms-input-placeholder {
+            color: var(--white);
         }
     }
 
