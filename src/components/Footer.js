@@ -63,9 +63,6 @@ const Footer = () => {
                 <a href="https://www.instagram.com/geerodge" target="_blank" rel="noreferrer">
                     <FaInstagram className="icons" />
                 </a>
-                <a href="https://steamcommunity.com/id/Geerodge" target="_blank" rel="noreferrer">
-                    <FaSteam className="icons" />
-                </a>
                 <a href="mailto:geerodge@gmail.com">
                     <SiMinutemailer className="icons" />
                 </a>
