@@ -92,9 +92,6 @@ const ContactForm = () => {
         
         <ContactFormStyles>
             <div className="form-wrapper">
-                {success && (
-                    <p style={{ color: "green" }}>Thanks for your message! </p>
-                )}
                 <form
                     id="contact"
                     name="contact"
@@ -120,6 +117,9 @@ const ContactForm = () => {
                     <p>
                         <button type="submit" className="primary">Send message</button>
                     </p>
+                    {success && (
+                        <p style={{ color: "white" }}>Thanks for your message! <span role="img" aria-label="Partying Face">🥳</span></p>
+                    )}
                 </form>
              </div>
         </ContactFormStyles>
