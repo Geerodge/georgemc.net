@@ -11,14 +11,10 @@ const ContactFormStyles = styled.div`
         background: var(--secondary);
         padding: 25px;
         margin: 3em auto;
+        color: var(--white);
         textarea {
             min-height: 5em;
             resize: none;
-            color: var(--white);
-        }
-        ::placeholder,
-        :-ms-input-placeholder,
-        ::-ms-input-placeholder {
             color: var(--white);
         }
     }
@@ -38,8 +34,27 @@ const ContactFormStyles = styled.div`
             transition: border-color 0.3s ease-in-out;
             border-bottom: 1px solid var(--tertiary);
         }
+        &::-webkit-input-placeholder {
+            color: var(--white);
+        }
+        &:-moz-placeholder { /* Firefox 18- */
+            color: var(--white);
+        }
+        &::-moz-placeholder { /* Firefox 19+ */
+            color: var(--white);
+        }
+        &:-ms-input-placeholder { /* IE 10+ */
+            color: var(--white);
+        }
+        &::-ms-input-placeholder { /* Edge */
+            color: var(--white);
+        }
+        &:placeholder-shown { /* Standard one last! */
+            color: var(--white);
+        }
     }
-
+        
+        
 `;
 
 const encode = (data) => {
