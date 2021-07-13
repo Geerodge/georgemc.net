@@ -101,6 +101,30 @@ const HeaderStyles = styled.div`
             }
         }
     }
+
+    /* For devices with width greater than or equal to 992px, like desktop computers */
+    @media only screen 
+        and (min-width: 992px) {
+
+            #overlay-button {
+                display: none;
+            }
+
+            #overlay {
+                position: static;
+                background: none;
+                font-size: .85em;
+                height: inherit;
+
+                ul {
+                    visibility: visible;
+                    flex-flow: row nowrap;
+                    height: 75px;
+                    margin: 0;
+                }
+            }
+
+    }
     
 `;
 
