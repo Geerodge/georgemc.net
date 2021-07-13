@@ -92,6 +92,9 @@ const ContactForm = () => {
         
         <ContactFormStyles>
             <div className="form-wrapper">
+                {success && (
+                    <p style={{ color: "green" }}>Thanks for your message! </p>
+                )}
                 <form
                     id="contact"
                     name="contact"
@@ -101,9 +104,6 @@ const ContactForm = () => {
                     netlify-honeypot="bot-field"
                     onSubmit={handleSubmit}
                     >
-                    {success && (
-                        <p style={{ color: "green" }}>Thanks for your message! </p>
-                        )}
                     <input type="hidden" name="form-name" value="contact" />
                     <p>
                         <input type="text" name="name" placeholder="Your name" required /> 
