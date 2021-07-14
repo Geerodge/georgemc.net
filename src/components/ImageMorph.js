@@ -25,7 +25,7 @@ const MorphStyles = styled.div`
   .morphing h1 {
       color: #fff;
       font-size: 35px;
-      text-transform:uppercase;
+      text-transform: uppercase;
       text-align: center;
       line-height: 300px;
       font-weight: 400;
@@ -52,6 +52,14 @@ const MorphStyles = styled.div`
           border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
       }
   }
+
+  .block-color {
+        position: relative;
+        background-color: var(--primary);
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+        box-shadow: 15px 15px 50px rgba(0,0,0,0.25);
+        margin: 2em;
+    }
 
   /* For devices with width greater than or equal to 769px, like landscape tablets and laptops */
   @media only screen
@@ -83,7 +91,7 @@ const ImageMorph = () => {
     return <div>Picture not found</div>
   }
 
-  return <MorphStyles><Img className="morphing" fluid={data.placeholderImage.childImageSharp.fluid} /></MorphStyles>
+  return <MorphStyles><div className="block-color"><Img className="morphing" fluid={data.placeholderImage.childImageSharp.fluid} /></div></MorphStyles>
   
 }
 
