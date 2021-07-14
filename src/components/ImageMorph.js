@@ -55,7 +55,7 @@ const MorphStyles = styled.div`
 
   .block-color {
         position: relative;
-        background-color: var(--primary);
+        background-color: var(--secondary);
         border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
         box-shadow: 15px 15px 50px rgba(0,0,0,0.25);
         margin: 2em;
