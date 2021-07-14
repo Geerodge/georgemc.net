@@ -77,6 +77,10 @@ const GlobalStyles = createGlobalStyle`
       }
     }
 
+    a {
+      color: var(--primary);
+    }
+
     .highlight {
       background-color: #fff2ac;
       background-image: linear-gradient(to right, #ffe359 0%, #fff2ac 100%);
