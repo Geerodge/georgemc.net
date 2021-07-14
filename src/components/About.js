@@ -53,7 +53,7 @@ const About = () => (
             <div className="item one">
                 <h2>About</h2>
                 <p>I'm a web developer from New Zealand currently based in Devon, UK.</p>
-                <p>I've been building websites and working in the IT industry for over 10 years <span role="img" aria-label="Nerd Face">🤓</span> <span role="img" aria-label="Thumb Up Sign">👍</span> </p>
+                <p>I've been building websites and working in the IT industry <span className="highlight">for over 10 years</span> <span role="img" aria-label="Nerd Face">🤓</span> <span role="img" aria-label="Thumb Up Sign">👍</span> </p>
                 <p>I have a wide range of experience which includes creating websites for small and midsize businesses, search engine optimisation (SEO), conversion rate optimization (CRO) and email marketing.</p>
                 <p>Visit my <a href="https://www.notion.so/George-McEntegart-54f946adb15d4ababfad7b490f1183ff">Notion</a> for more details.</p>
             </div>

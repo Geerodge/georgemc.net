@@ -53,8 +53,23 @@ const ContactFormStyles = styled.div`
             color: var(--white);
         }
     }
-        
-        
+
+    /* For devices with width greater than or equal to 769px, like landscape tablets and laptops */
+    @media only screen
+        and (min-width: 768px) {
+
+            form {
+                width: 60%;
+                p {
+                    text-align: center;
+                }
+                input, textarea {
+                    width: 90%; 
+                }
+            }
+
+    }
+
 `;
 
 const encode = (data) => {
