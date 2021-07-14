@@ -90,9 +90,6 @@ const handleSubmit = e => {
     e.preventDefault();
 };
 
-// const contactForm = document.getElementById("contact");
-// contactForm.addEventListener("submit", handleFormSubmit);
-
 const ContactForm = () => {
 
     const [success, setSuccess] = useState(false);
