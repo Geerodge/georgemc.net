@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { FaGithub, FaTwitter, FaLinkedin, FaSteam, FaInstagram } from 'react-icons/fa';
+import { FaGithub, FaTwitter, FaLinkedin, FaInstagram } from 'react-icons/fa';
 import { SiMinutemailer } from 'react-icons/si';
 import ReactRotatingText from "react-rotating-text";
 
