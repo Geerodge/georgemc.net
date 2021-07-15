@@ -7,7 +7,10 @@ import About from "../components/About";
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO 
+      title="Home"
+      description="I create attractive websites and web applications that make your business grow."
+    />
     <Intro />
     <About />
     <Projects />
