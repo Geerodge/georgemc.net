@@ -9,7 +9,7 @@ const HeaderStyles = styled.div`
     @-webkit-keyframes bugfix { from {padding:0;} to {padding:0;}}
 
     #overlay-button {
-        position: absolute;
+        position: fixed;
         right: 1em;
         top: .5em;
         padding: 26px 11px;
@@ -121,6 +121,7 @@ const HeaderStyles = styled.div`
                     flex-flow: row nowrap;
                     height: 75px;
                     margin: 0;
+                    font-size: .9em;
                 }
             }
 
@@ -138,6 +139,7 @@ const Header = () => (
                 <ul>
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="/about">About</Link></li>
+                    <li><Link to="/blog">Blog</Link></li>
                     <li><Link to="/contact">Contact</Link></li>
                 </ul>
             </div>
