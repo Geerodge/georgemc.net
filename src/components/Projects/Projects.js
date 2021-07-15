@@ -91,7 +91,7 @@ const Projects = () => (
             <div className="item three">
                 <Project
                     heading="The Tree Planters"
-                    description="A UK tree planting charity that I'm Trustee of."
+                    description="A UK tree planting charity that I'm a Trustee of."
                     link="http://thetreeplanters.georgemc.net"
                     imgsrc="the-tree-planters.png"
                     alt="The Tree Planters"
