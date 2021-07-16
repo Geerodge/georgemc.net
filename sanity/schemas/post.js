@@ -24,12 +24,19 @@ export default {
       to: {type: 'author'},
     },
     {
+      name: 'seoTitle',
+      title: 'SEO Title',
+      type: 'string',
+    },
+    {
+      name: 'seoDescription',
+      title: 'SEO Description',
+      type: 'string',
+    },
+    {
       name: 'mainImage',
       title: 'Main image',
-      type: 'image',
-      options: {
-        hotspot: true,
-      },
+      type: 'imagealt',
     },
     {
       name: 'categories',
