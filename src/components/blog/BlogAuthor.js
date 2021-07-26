@@ -54,7 +54,10 @@ const BlogAuthor = (props) => (
 
     <BlogAuthorStyles>
         <div className="author">
-            <Img fixed={props.src} alt={props.alt} />
+            <Img 
+                fixed={props.src}
+                alt={props.alt}
+            />
             <div className="bio">
                 <h4>{props.author}</h4>
                 <p>{props.bio}</p>
