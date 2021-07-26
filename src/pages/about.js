@@ -1,11 +1,11 @@
 import React from "react";
 import About from "../components/About";
 import Layout from "../components/Layout";
-import SEO from "../components/SEO";
+import Seo from "../components/Seo";
 
 const AboutPage = () => (
   <Layout>
-    <SEO 
+    <Seo 
       title="About"
       description="Freelance web developer based in North Devon, UK."
     />

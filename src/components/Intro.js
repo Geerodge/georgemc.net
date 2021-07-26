@@ -152,6 +152,7 @@ const Intro = () => (
             </Link>
             <i className="arrow down"></i>
         </div>
+        <h2>Services</h2>
         <div className="item-wrapper">
             <div className="item one">
                 <Box 

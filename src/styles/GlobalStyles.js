@@ -31,6 +31,7 @@ const GlobalStyles = createGlobalStyle`
     line-height: 1.75;
     color: var(--black);
     width: 100vw;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
 
     h1, h2, h3, h4, h5, h6 {
       font-family: "Montserrat", sans-serif;

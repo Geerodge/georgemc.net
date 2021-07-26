@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "../components/Layout";
-import SEO from "../components/SEO";
+import Seo from "../components/Seo";
 import ContactForm from "../components/ContactForm";
 import styled from "styled-components";
 
@@ -14,7 +14,7 @@ const ContactPageStyles = styled.div`
 const ContactPage = () => (
   <Layout>
     <ContactPageStyles>
-      <SEO 
+      <Seo 
         title="Contact"
         description="I’m always open to ideas and new opportunities."
       />
