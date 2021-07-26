@@ -4,9 +4,10 @@ import Img from "gatsby-image"
 
 const BlogAuthorStyles = styled.div`
 
-    /* background-color: var(--primary);
+    background-color: var(--primary);
     color: var(--white);
     padding: 1em;
+    text-align: center;
 
     h4 {
         color: var(--white);
@@ -19,18 +20,33 @@ const BlogAuthorStyles = styled.div`
         max-height: 200px;
     }
 
-    .author {
-        display: flex;
-        align-items: center;
-        align-content: center;
-    }
     .bio {
-        margin-left: 1em;
-        h4 {
-            color: var(--white);
-            margin: 0;
+        text-align: left;
+        margin-top: 1em;
+    }
+
+    /* For devices with width greater than or equal to 992px, like landscape tablets and laptops */
+    @media only screen
+        and (min-width: 992px) {
+
+            .author {
+                display: flex;
+                align-items: center;
+                align-content: center;
+                margin: 0 auto;
+                width: 100%;
+            }
+            
+            .bio {
+                margin-left: 1em;
+                h4 {
+                    color: var(--white);
+                    margin: 0;
+                }
+            }
+
         }
-    } */
+
 
 `;
 

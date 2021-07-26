@@ -11,14 +11,14 @@ import Img from "gatsby-image"
 
 const BlogStyles = styled.div`
 
+  margin: 1em;
+
 `;
 
 // Data is passed in via context in gatsby-node.js
 export default function BlogPosts({ pageContext: { slug }, data: { allSanityPost } }) {
     // Deconstruct page data
     const blogData = allSanityPost.edges[0].node;
-
-    console.log(blogData);
 
     return (
       <Layout>
@@ -27,6 +27,7 @@ export default function BlogPosts({ pageContext: { slug }, data: { allSanityPost
             title={blogData.seoTitle}
             description={blogData.seoDescription}
           />
+          <h1>{blogData.title}</h1>
           <BlogDate 
             createdAt={blogData._createdAt}
             updatedAt={blogData._updatedAt}
@@ -35,7 +36,6 @@ export default function BlogPosts({ pageContext: { slug }, data: { allSanityPost
             fluid={blogData.mainImage.asset.fluid}
             alt={blogData.mainImage.alt}
           />
-          <h1>{blogData.title}</h1>
           <BlockContent
             blocks={blogData._rawBody}
           />

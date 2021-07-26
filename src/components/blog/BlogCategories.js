@@ -8,11 +8,11 @@ const CategoryStyles = styled.div`
 const BlogCategories = (props) => (
 
     <CategoryStyles>
-        <ul>
+        <p>
             {props.categories.map((category, index) => (
-                <li key={index}>{category.title}</li>
+                <span key={index}>{category.title + ` `}</span>
             ))}
-        </ul>
+        </p>
     </CategoryStyles>
 
 )
