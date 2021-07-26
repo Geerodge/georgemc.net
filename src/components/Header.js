@@ -75,7 +75,7 @@ const HeaderStyles = styled.div`
         background: var(--primary);
         z-index: 2;
         visibility: hidden;
-        position: absolute;
+        position: fixed;
         &.active {
             visibility: visible;
         }
