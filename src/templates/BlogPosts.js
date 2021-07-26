@@ -44,7 +44,7 @@ export default function BlogPosts({ pageContext: { slug }, data: { allSanityPost
           />
           <BlogAuthor 
             author={blogData.author.name}
-            src={blogData.author.mainImage.asset.fluid}
+            src={blogData.author.mainImage.asset.fixed}
             alt={blogData.author.mainImage.alt}
             bio={blogData.author.bio[0]._rawChildren[0].text}
           />
@@ -70,8 +70,8 @@ query($slug: String!) {
                 mainImage {
                   alt
                   asset {
-                    fluid(maxWidth: 400) {
-                      ...GatsbySanityImageFluid
+                    fixed(width: 400) {
+                      ...GatsbySanityImageFixed
                     }
                   }
                 }
