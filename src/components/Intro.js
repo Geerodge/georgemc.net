@@ -172,7 +172,7 @@ const Intro = () => (
             <Box
                 icon="tools"
                 heading="Troubleshooting and Maintenance"
-                description="I can help you set up web hosting and troubleshoot your website or application, making sure it's always available for users, giving you peace of mind to focus on what matters."
+                description="I can help you troubleshoot your application or set up your website to ensure it's secure and available for users, giving you peace of mind to focus on what matters."
             />
             </div>
         </div>
