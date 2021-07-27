@@ -171,8 +171,8 @@ const Intro = () => (
             <div className="item three">
             <Box
                 icon="tools"
-                heading="Hosting and Maintenance "
-                description="I can offer industry leading web hosting and maintenance to ensure your website or application is always available for it's users, giving you peace of mind to focus on what matters."
+                heading="Troubleshooting and Maintenance"
+                description="I can help you set up web hosting and troubleshoot your website or application, making sure it's always available for users, giving you peace of mind to focus on what matters."
             />
             </div>
         </div>
