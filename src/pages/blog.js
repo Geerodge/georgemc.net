@@ -7,7 +7,6 @@ import BlogPostPreviewList from "../components/blog/BlogPostPreviewList";
 export default function BlogPage({ data: { allSanityPost } }) {
 
   const blogData = allSanityPost.edges;
-  console.log(allSanityPost);
 
   return (
     <Layout>
@@ -15,16 +14,10 @@ export default function BlogPage({ data: { allSanityPost } }) {
         title="Blog"
         description="I write about web development and things I've learnt building websites."
       />
-      {/* <BlogPostPreviewList
+      <BlogPostPreviewList
         title="Latest blog posts"
         data={blogData}
-      /> */}
-      {/* Need to work out what to replace blogData.slug with and then work this into the component BlogPostPreviewList.js with perhaps a map or foreach function */}
-      <ul>
-        {blogData.map((post, index) => (
-            <li key={index}>{blogData.slug}</li>
-        ))}
-      </ul>
+      />
     </Layout>
   )
 }
@@ -36,6 +29,40 @@ query BlogQuery {
             node {
                 slug {
                     current
+                }
+                mainImage {
+                  alt
+                  asset {
+                    fluid(maxWidth: 1000) {
+                      ...GatsbySanityImageFluid
+                    }
+                  }
+                }
+                title
+                seoTitle
+                seoDescription
+                _updatedAt
+                _createdAt
+                author {
+                  name
+                  mainImage {
+                    alt
+                    asset {
+                      fixed(width: 400) {
+                        ...GatsbySanityImageFixed
+                      }
+                    }
+                  }
+                  bio {
+                    _key
+                    _type
+                    style
+                    list
+                    _rawChildren
+                  }
+                }
+                categories {
+                  title
                 }
             }
         }

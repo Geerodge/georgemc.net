@@ -7,7 +7,7 @@ import Seo from "../components/Seo";
 import BlogDate from "../components/blog/BlogDate";
 import BlogCategories from "../components/blog/BlogCategories";
 import BlogAuthor from "../components/blog/BlogAuthor";
-import Img from "gatsby-image"
+import BlogImage from "../components/blog/BlogImage";
 
 const BlogStyles = styled.div`
 
@@ -32,9 +32,8 @@ export default function BlogPosts({ pageContext: { slug }, data: { allSanityPost
             createdAt={blogData._createdAt}
             updatedAt={blogData._updatedAt}
           />
-          <Img
-            fluid={blogData.mainImage.asset.fluid}
-            alt={blogData.mainImage.alt}
+          <BlogImage 
+            data={blogData}
           />
           <BlockContent
             blocks={blogData._rawBody}

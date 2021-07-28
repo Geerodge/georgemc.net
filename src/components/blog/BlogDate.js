@@ -24,7 +24,7 @@ function dateCheck(dateCreated, dateUpdated) {
 
 const BlogDate = (props) => (
 
-    <p>{dateCheck(props.createdAt, props.updatedAt)}</p>
+    <p className="date">{dateCheck(props.createdAt, props.updatedAt)}</p>
 
 )
 

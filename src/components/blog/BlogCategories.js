@@ -10,12 +10,12 @@ const BlogCategories = (props) => (
 
     <CategoryStyles>
         <p>
-            {props.categories.map((category, i, index) => {
+            {props.categories.map((category, i) => {
                 const lastIndex = props.categories.length - 1;
                 if (i === lastIndex) {
-                    return (<span key={index}>{category.title}</span>)
+                    return (<span key={category.title.toString()}>{category.title}</span>)
                 } else {
-                    return (<span key={index}>{category.title + `, `}</span>)
+                    return (<span key={category.title.toString()}>{category.title + `, `}</span>)
                 }
             })}
         </p>
