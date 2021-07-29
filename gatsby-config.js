@@ -44,7 +44,6 @@ module.exports = {
         projectId: `3rtiop9p`,
         dataset: `production`,
         token: process.env.SANITY_TOKEN,
-        watchMode: true,
       },
     },
   ],
