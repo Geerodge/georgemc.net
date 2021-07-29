@@ -9,6 +9,57 @@ exports.createPages = async ({graphql, actions}) => {
                         slug {
                             current
                         }
+                        id
+                        title
+                        seoTitle
+                        seoDescription
+                        _rawBody
+                        _updatedAt
+                        _createdAt
+                        author {
+                          name
+                          mainImage {
+                            alt
+                            asset {
+                              fixed(width: 400) {
+                                base64
+                                srcWebp
+                                srcSetWebp
+                                src
+                                srcSet
+                              }
+                            }
+                          }
+                          bio {
+                            _key
+                            _type
+                            style
+                            list
+                            _rawChildren
+                          }
+                        }
+                        categories {
+                          title
+                        }
+                        mainImage {
+                          alt
+                          asset {
+                            fluid(maxWidth: 1000) {
+                                base64
+                                srcWebp
+                                srcSetWebp
+                                src
+                                srcSet
+                            }
+                          }
+                        }
+                        body {
+                          _key
+                          _type
+                          style
+                          list
+                          _rawChildren
+                        }
                     }
                 }
             }
@@ -25,8 +76,8 @@ exports.createPages = async ({graphql, actions}) => {
         createPage({
             path,
             component: require.resolve('./src/templates/BlogPosts.js'),
-            // Passing the page slug as context, rest of data is collected on page template
-            context: {slug: edge.node.slug.current},
+            // Passing all the data to the page
+            context: {data: edge.node},
         })
     })
 }

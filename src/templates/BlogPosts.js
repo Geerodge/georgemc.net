@@ -1,5 +1,4 @@
 import React from "react";
-import { useStaticQuery, graphql } from "gatsby";
 import BlockContent from "@sanity/block-content-to-react";
 import styled from "styled-components";
 import Layout from "../components/Layout";
@@ -20,89 +19,36 @@ const BlogStyles = styled.div`
 `;
 
 // Data is passed in via context in gatsby-node.js
-export default function BlogPosts({ pageContext: { slug }, data: { allSanityPost } }) {
-    // Deconstruct page data
-    const blogData = allSanityPost.edges[0].node;
+export default function BlogPosts({ pageContext: { data } }) {
 
-    const dataNew = useStaticQuery(graphql`
-      query($slug: String!) {
-        allSanityPost(filter: {slug: {current: {eq: $slug}}}) {
-            edges {
-                node {
-                  id
-                  title
-                  seoTitle
-                  seoDescription
-                  _rawBody
-                  _updatedAt
-                  _createdAt
-                  author {
-                    name
-                    mainImage {
-                      alt
-                      asset {
-                        fixed(width: 400) {
-                          ...GatsbySanityImageFixed
-                        }
-                      }
-                    }
-                    bio {
-                      _key
-                      _type
-                      style
-                      list
-                      _rawChildren
-                    }
-                  }
-                  categories {
-                    title
-                  }
-                  mainImage {
-                    alt
-                    asset {
-                      fluid(maxWidth: 1000) {
-                        ...GatsbySanityImageFluid
-                      }
-                    }
-                  }
-                  body {
-                    _key
-                    _type
-                    style
-                    list
-                    _rawChildren
-                  }
-                }
-              }
-            }
-          }
-    `)
+    {console.log(data)}
+
     return (
       <Layout>
         <BlogStyles>
           <Seo 
-            title={blogData.seoTitle}
-            description={blogData.seoDescription}
+            title={data.seoTitle}
+            description={data.seoDescription}
           />
-          <h1>{blogData.title}</h1>
+          <h1>{data.title}</h1>
           <BlogDate 
-            createdAt={blogData._createdAt}
-            updatedAt={blogData._updatedAt}
+            createdAt={data._createdAt}
+            updatedAt={data._updatedAt}
           />
           <BlogImage 
-            data={blogData}
+            data={data}
           />
           <BlockContent
-            blocks={blogData._rawBody}
+            blocks={data._rawBody}
           />
           <BlogCategories
-            categories={blogData.categories}
+            categories={data.categories}
           />
           <BlogAuthor 
-            author={blogData.author.name}
-            src={blogData.author.mainImage.asset.fixed}
-            alt={blogData.author.mainImage.alt}
-            bio={blogData.author.bio[0]._rawChildren[0].text}
+            author={data.author.name}
+            src={data.author.mainImage.asset.fixed.src}
+            alt={data.author.mainImage.alt}
+            bio={data.author.bio[0]._rawChildren[0].text}
           />
         </BlogStyles>
       </Layout>
