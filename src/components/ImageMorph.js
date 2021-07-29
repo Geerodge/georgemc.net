@@ -5,73 +5,60 @@ import styled from "styled-components";
 
 const MorphStyles = styled.div`
 
-  .gatsby-image-wrapper {
-      margin: 0 auto;
-  }
+    .gatsby-image-wrapper {
+        margin: 0 auto;
+    }
 
-  /* Image Effect */
-  .morphing {
-      max-width: 85%;
-      background-image: linear-gradient(-225deg, #CBBACC 0%, #2580B3 100%);
-      border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-      box-shadow: 15px 15px 50px rgba(0,0,0,0.25);
-      animation: morphing 10s infinite;
-  }
+    /* Image Effect */
+    .morphing {
+        max-width: 85%;
+        background-image: linear-gradient(-225deg, #CBBACC 0%, #2580B3 100%);
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+        box-shadow: 15px 15px 50px rgba(0,0,0,0.25);
+        animation: morphing 10s infinite;
+    }
 
-  .morphing:hover {
-      animation-play-state: paused;
-  }
+    .morphing:hover {
+        animation-play-state: paused;
+    }
 
-  .morphing h1 {
-      color: #fff;
-      font-size: 35px;
-      text-transform: uppercase;
-      text-align: center;
-      line-height: 300px;
-      font-weight: 400;
-      text-shadow: 1px 1px 4px rgba(0,0,0.1);
-  }
+    .morphing h1 {
+        color: #fff;
+        font-size: 35px;
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 300px;
+        font-weight: 400;
+        text-shadow: 1px 1px 4px rgba(0,0,0.1);
+    }
 
-  @keyframes morphing {
-      0% {
-          border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-          }
-      25% {
-          border-radius: 50% 50% 50% 70% / 50% 50% 70% 60%;
-          box-shadow: -15px -15px -50px rgba(0,0,0,0.25);
-      }
-      50% {
-          border-radius: 50% 40% 50% 80% / 50% 45% 70% 50%;
-          box-shadow: -15px -15px -50px rgba(0,0,0,0.25);
-      }
-      70% {
-          border-radius: 50% 70% 50% 50% / 70% 60% 50% 50%;
-          box-shadow: -30x -30x -20x rgba(0,0,0,0.25);
-      }
-      100% {
-          border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-      }
-  }
+    @keyframes morphing {
+        0% {
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            }
+        25% {
+            border-radius: 50% 50% 50% 70% / 50% 50% 70% 60%;
+            box-shadow: -15px -15px -50px rgba(0,0,0,0.25);
+        }
+        50% {
+            border-radius: 50% 40% 50% 80% / 50% 45% 70% 50%;
+            box-shadow: -15px -15px -50px rgba(0,0,0,0.25);
+        }
+        70% {
+            border-radius: 50% 70% 50% 50% / 70% 60% 50% 50%;
+            box-shadow: -30x -30x -20x rgba(0,0,0,0.25);
+        }
+        100% {
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+        }
+    }
 
-  .block-color {
-      position: relative;
-      background-color: var(--secondary);
-      border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-      box-shadow: 15px 15px 50px rgba(0,0,0,0.25);
-      margin: 2em;
-      width: 70%;
-  }
-
-  /* For devices with width greater than or equal to 769px, like landscape tablets and laptops */
-  @media only screen
-    and (min-width: 769px) {
-
-      /* Image Effect */
-      .morphing {
-        max-width: 70%
-      }
-
-  }
+    .block-color {
+        position: relative;
+        background-color: var(--secondary);
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+        box-shadow: 15px 15px 50px rgba(0,0,0,0.25);
+    }
 
 `;
 
