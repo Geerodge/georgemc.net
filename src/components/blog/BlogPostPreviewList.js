@@ -152,7 +152,6 @@ const BlogPostPreviewList = (props) => (
 
     <BlogPostPreviewListStyles>
         <h1>{props.title}</h1>
-        {console.log(props)}
         <div className="container">
             {props.data.map((post, i) => (
                 <div className="post" key={post.toString()}>

@@ -1,5 +1,5 @@
 import React from "react";
-import { graphql } from "gatsby";
+import { StaticQuery, graphql } from "gatsby";
 import BlockContent from "@sanity/block-content-to-react";
 import styled from "styled-components";
 import Layout from "../components/Layout";
@@ -56,8 +56,9 @@ export default function BlogPosts({ pageContext: { slug }, data: { allSanityPost
     )
 }
 
-export const query = graphql`
-query($slug: String!) {
+<StaticQuery
+  query={graphql`
+  query($slug: String!) {
     allSanityPost(filter: {slug: {current: {eq: $slug}}}) {
         edges {
             node {
@@ -108,4 +109,6 @@ query($slug: String!) {
           }
         }
       }
-`;
+  `}
+  render={blogData => <Header blogData={blogData} />}
+/>

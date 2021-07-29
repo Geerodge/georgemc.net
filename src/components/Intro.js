@@ -102,7 +102,7 @@ const IntroStyles = styled.div`
 
   }
 
-  /* For devices with width greater than or equal to 822px (slight tweek to text size) */
+  /* For devices with width greater than or equal to 822px (slight tweak to text size) */
   @media only screen
     and (min-width: 822px) {
 
