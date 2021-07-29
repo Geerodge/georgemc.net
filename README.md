@@ -1,6 +1,6 @@
 # George McEntegart
 
-My basic personal website. Visit [https://georgemc.net/](https://georgemc.net/).
+Personal website with Sanity blog. Visit [https://georgemc.net/](https://georgemc.net/).
 
 ## Getting Started
 
@@ -13,6 +13,7 @@ You will need to install the following applications and versions.
 * Gatsby v2.26.1
 * React v16.12.0
 * Node.js v15.5.0
+* Sanity v2.13.0
 
 ### Installing
 
@@ -39,6 +40,7 @@ Built using React, Gatsby and Sanity, with Snipcart for Ecommerce/shopping cart.
 * [Gatsby](https://www.gatsbyjs.com/) - The web framework used
 * [Reactjs](https://reactjs.org/) - JavaScript library
 * [npm](https://www.npmjs.com/) - Dependency Management
+* [Sanity](https://www.sanity.io/) - Content platform
 
 ## Authors
 
