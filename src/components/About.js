@@ -4,7 +4,7 @@ import ImageMorph from "./ImageMorph";
 
 const AboutStyles = styled.div`
 
-    margin: 4em 1em;
+    margin: 1em 1em;
 
     .item-wrapper {
         display: flex;
@@ -13,8 +13,18 @@ const AboutStyles = styled.div`
     }
 
     .two {
-        margin-top: 2em;
+        margin: 1em;
         width: 100%;
+    }
+
+    /* For devices with width greater than or equal to 768px, like desktop computers */
+    @media only screen 
+        and (min-width: 768px) {
+
+            .two {
+                margin: 1em;
+            }
+
     }
 
     /* For devices with width greater than or equal to 992px, like desktop computers */
@@ -31,7 +41,6 @@ const AboutStyles = styled.div`
 
         .two {
             flex: 1;
-            margin-top: 0em;
         }
 
     }
@@ -40,7 +49,7 @@ const AboutStyles = styled.div`
     @media only screen 
         and (min-width: 1280px) {
 
-            margin: 3em 1em;
+        margin: 3em 1em;
 
     }
 
@@ -51,7 +60,7 @@ const About = () => (
     <AboutStyles>
         <div className="item-wrapper">
             <div className="item one">
-                <h2>About</h2>
+                <h1>About</h1>
                 <p>I'm a New Zealand-born web developer based in North Devon, UK.</p>
                 <p><span className="highlight">I love to help people grow their businesses and side projects</span>. I've been building websites and working in the IT industry for over 10 years <span role="img" aria-label="Nerd Face">🤓</span> <span role="img" aria-label="Thumb Up Sign">👍</span> </p>
                 <p>My background includes creating websites for small and midsize businesses, search engine optimisation (SEO), conversion rate optimization (CRO) and email marketing.</p>

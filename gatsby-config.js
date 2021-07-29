@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env`,
+});
+
 module.exports = {
   siteMetadata: {
     title: `George McEntegart`,
@@ -34,8 +38,14 @@ module.exports = {
         ],
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-source-sanity`,
+      options: {
+        projectId: `3rtiop9p`,
+        dataset: `production`,
+        token: process.env.SANITY_TOKEN,
+        watchMode: true,
+      },
+    },
   ],
 }

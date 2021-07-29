@@ -7,7 +7,7 @@ import styled from "styled-components";
 
 const ContactPageStyles = styled.div`
 
-  margin: 3em 1em;
+  margin: 2em 1em;
 
 `;
 
