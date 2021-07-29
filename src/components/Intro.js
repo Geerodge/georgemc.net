@@ -165,7 +165,7 @@ const Intro = () => (
                 <Box
                     icon="mobile"
                     heading="Mobile and SEO Optimised"
-                    description="Every website I develop works seamlessly on mobile and tablets, whilst similtanously being SEO optimised to ensure that your website is accessible by search engines."
+                    description="Every website I develop works seamlessly on mobile and tablets, whilst simultaneously being SEO optimised to ensure that your website is accessible by search engines."
                 />
             </div>
             <div className="item three">
