@@ -11,7 +11,20 @@ import BlogImage from "../components/blog/BlogImage";
 
 const BlogStyles = styled.div`
 
-  margin: 1em;
+    margin: 1em;
+
+    h1 {
+        line-height: 1.2em;
+    }
+
+    @media only screen 
+        and (min-width: 992px) {
+
+        .gatsby-image-wrapper {
+            
+        }
+
+    }
 
 `;
 

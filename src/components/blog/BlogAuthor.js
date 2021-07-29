@@ -9,7 +9,7 @@ const BlogAuthorStyles = styled.div`
     padding: 1em;
     text-align: center;
 
-    h4 {
+    h4, h3 {
         color: var(--white);
         margin-top: 0;
     }
