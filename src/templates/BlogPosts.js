@@ -17,15 +17,6 @@ const BlogStyles = styled.div`
         line-height: 1.2em;
     }
 
-    @media only screen 
-        and (min-width: 992px) {
-
-        .gatsby-image-wrapper {
-            
-        }
-
-    }
-
 `;
 
 // Data is passed in via context in gatsby-node.js
