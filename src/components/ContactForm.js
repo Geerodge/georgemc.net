@@ -124,7 +124,7 @@ const ContactForm = () => {
                         <input type="tel" name="tel" placeholder="Your phone number" required />
                     </p>
                     <p>
-                        <textarea name="message" placeholder="Your messsage" required></textarea>
+                        <textarea name="message" placeholder="Your message" required></textarea>
                     </p>
                     <p>
                         <button type="submit" className="primary">Send message</button>
