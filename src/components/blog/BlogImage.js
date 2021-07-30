@@ -10,7 +10,7 @@ function checkForMainBlogImage(data) {
     || data.mainImage.alt === null) {
         return <p>Featured image or alt text not set</p>
     } else {
-        return <Img src={data.mainImage.asset.fluid.src} alt={data.mainImage.alt} />
+        return <Img fluid={data.mainImage.asset.fluid} alt={data.mainImage.alt} />
     }
 
 }

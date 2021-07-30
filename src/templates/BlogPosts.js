@@ -21,8 +21,6 @@ const BlogStyles = styled.div`
 // Data is passed in via context in gatsby-node.js
 export default function BlogPosts({ pageContext: { data } }) {
 
-    {console.log(data)}
-
     return (
       <Layout>
         <BlogStyles>
@@ -46,7 +44,7 @@ export default function BlogPosts({ pageContext: { data } }) {
           />
           <BlogAuthor 
             author={data.author.name}
-            src={data.author.mainImage.asset.fixed.src}
+            src={data.author.mainImage.asset.fixed}
             alt={data.author.mainImage.alt}
             bio={data.author.bio[0]._rawChildren[0].text}
           />

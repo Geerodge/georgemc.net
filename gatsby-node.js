@@ -23,8 +23,8 @@ exports.createPages = async ({graphql, actions}) => {
                             asset {
                               fixed(width: 400) {
                                 base64
-                                srcWebp
-                                srcSetWebp
+                                width
+                                height
                                 src
                                 srcSet
                               }
@@ -45,11 +45,11 @@ exports.createPages = async ({graphql, actions}) => {
                           alt
                           asset {
                             fluid(maxWidth: 1000) {
-                                base64
-                                srcWebp
-                                srcSetWebp
-                                src
-                                srcSet
+                              base64
+                              aspectRatio
+                              src
+                              srcSet
+                              sizes
                             }
                           }
                         }

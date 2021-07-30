@@ -52,22 +52,13 @@ const BlogPostPreviewListStyles = styled.div`
             justify-content: space-around;
             align-items: center;
 
-            min-width: 100%;
-            padding: 1em .3em;
+            padding: 1em 2em;
             background-color: var(--primary);
 
             overflow: hidden;
 
             &::after {
                 content: none;
-            }
-
-            .left {
-                width: 35%;
-            }
-
-            .right {
-                width: 65%;
             }
 
             .date {
@@ -92,7 +83,7 @@ const BlogPostPreviewListStyles = styled.div`
                 background-color: var(--white);
                 border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
                 box-shadow: 15px 15px 50px rgba(0,0,0,0.25);
-                margin: 2em;
+                margin: 2em 2em 2em auto;
             }
 
             // Even numbered blog posts
