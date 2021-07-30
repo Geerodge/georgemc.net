@@ -21,13 +21,7 @@ exports.createPages = async ({graphql, actions}) => {
                           mainImage {
                             alt
                             asset {
-                              fixed(width: 400) {
-                                base64
-                                width
-                                height
-                                src
-                                srcSet
-                              }
+                              gatsbyImageData
                             }
                           }
                           bio {
@@ -44,13 +38,7 @@ exports.createPages = async ({graphql, actions}) => {
                         mainImage {
                           alt
                           asset {
-                            fluid(maxWidth: 1000) {
-                              base64
-                              aspectRatio
-                              src
-                              srcSet
-                              sizes
-                            }
+                            gatsbyImageData
                           }
                         }
                         body {

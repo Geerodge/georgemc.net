@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image";
 
 const BlogAuthorStyles = styled.div`
 
@@ -54,8 +54,8 @@ const BlogAuthor = (props) => (
 
     <BlogAuthorStyles>
         <div className="author">
-            <Img 
-                fixed={props.src}
+            <GatsbyImage 
+                image={props.image}
                 alt={props.alt}
             />
             <div className="bio">

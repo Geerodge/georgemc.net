@@ -1,17 +1,24 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import Img from "gatsby-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 import styled from "styled-components";
 
 const MorphStyles = styled.div`
 
     .gatsby-image-wrapper {
-        margin: 0 auto;
+        width: 80%;
+    }
+
+    .block-color {
+        position: relative;
+        background-color: var(--secondary);
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+        box-shadow: 15px 15px 50px rgba(0,0,0,0.25);
+        text-align: center;
     }
 
     /* Image Effect */
     .morphing {
-        max-width: 85%;
         background-image: linear-gradient(-225deg, #CBBACC 0%, #2580B3 100%);
         border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
         box-shadow: 15px 15px 50px rgba(0,0,0,0.25);
@@ -53,13 +60,6 @@ const MorphStyles = styled.div`
         }
     }
 
-    .block-color {
-        position: relative;
-        background-color: var(--secondary);
-        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-        box-shadow: 15px 15px 50px rgba(0,0,0,0.25);
-    }
-
 `;
 
 const ImageMorph = () => {
@@ -67,19 +67,17 @@ const ImageMorph = () => {
       query {
         placeholderImage: file(relativePath: { eq: "george-mcentegart.jpg" }) {
           childImageSharp {
-            fluid(maxWidth: 800) {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(layout: CONSTRAINED)
           }
         }
       }
   `)
 
-  if (!data?.placeholderImage?.childImageSharp?.fluid) {
+  if (!data?.placeholderImage?.childImageSharp?.gatsbyImageData) {
     return <div>Picture not found</div>
   }
 
-  return <MorphStyles><div className="block-color"><Img className="morphing" fluid={data.placeholderImage.childImageSharp.fluid} /></div></MorphStyles>
+  return <MorphStyles><div className="block-color"><GatsbyImage className="morphing" image={data.placeholderImage.childImageSharp.gatsbyImageData} /></div></MorphStyles>
   
 }
 

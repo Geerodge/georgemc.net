@@ -33,9 +33,7 @@ query BlogQuery {
                 mainImage {
                   alt
                   asset {
-                    fluid(maxWidth: 1000) {
-                      ...GatsbySanityImageFluid
-                    }
+                    gatsbyImageData
                   }
                 }
                 title
@@ -48,9 +46,7 @@ query BlogQuery {
                   mainImage {
                     alt
                     asset {
-                      fixed(width: 400) {
-                        ...GatsbySanityImageFixed
-                      }
+                      gatsbyImageData
                     }
                   }
                   bio {

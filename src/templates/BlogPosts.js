@@ -44,7 +44,7 @@ export default function BlogPosts({ pageContext: { data } }) {
           />
           <BlogAuthor 
             author={data.author.name}
-            src={data.author.mainImage.asset.fixed}
+            image={data.author.mainImage.asset.gatsbyImageData}
             alt={data.author.mainImage.alt}
             bio={data.author.bio[0]._rawChildren[0].text}
           />

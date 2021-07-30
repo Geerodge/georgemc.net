@@ -1,16 +1,16 @@
 import React from "react";
-import Img from "gatsby-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 
 // Checks if the main blog image has been added to post in Sanity CMS
 function checkForMainBlogImage(data) {
 
-    if (typeof data.mainImage.asset.fluid === 'undefined'
-    || data.mainImage.asset.fluid === null
+    if (typeof data.mainImage.asset.gatsbyImageData === 'undefined'
+    || data.mainImage.asset.gatsbyImageData === null
     || data.mainImage.alt === 'undefined'
     || data.mainImage.alt === null) {
         return <p>Featured image or alt text not set</p>
     } else {
-        return <Img fluid={data.mainImage.asset.fluid} alt={data.mainImage.alt} />
+        return <GatsbyImage image={data.mainImage.asset.gatsbyImageData} alt={data.mainImage.alt} />
     }
 
 }

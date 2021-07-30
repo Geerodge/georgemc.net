@@ -16,10 +16,6 @@ const ProjectStyles = styled.div`
             color: var(--white);
             margin-top: 0;
         }
-        .link {
-            position: absolute;
-            bottom: 0;
-        }
     }
 
     a {
@@ -42,21 +38,21 @@ const ProjectStyles = styled.div`
 
 `;
 
-const Project = ({ heading, description, link, imgsrc, alt }) => (
+const Project = ({ heading, description, link, img, alt }) => (
 
   <ProjectStyles>
     <a href={link} target="_blank" rel="noreferrer">
         <div className="box">
             {(() => {
-                if (imgsrc === "cheeky-tea.png") {
+                if (img === "cheeky-tea.png") {
                     return (
                         <Cheekytea alt={alt} />
                         )
-                } else if (imgsrc === "house-buy-fast.png") {
+                } else if (img === "house-buy-fast.png") {
                     return (
                         <Housebuyfast alt={alt} />
                         )
-                } else if (imgsrc === "the-tree-planters.png") {
+                } else if (img === "the-tree-planters.png") {
                     return (
                         <Treeplanters alt={alt} />
                         )
