@@ -43,6 +43,7 @@ module.exports = {
       options: {
         projectId: `3rtiop9p`,
         dataset: `production`,
+        apiVersion: '2021-07-30',
         token: process.env.SANITY_TOKEN,
       },
     },
