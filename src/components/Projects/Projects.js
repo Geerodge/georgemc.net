@@ -17,13 +17,22 @@ const ProjectsStyles = styled.div`
         min-width: 100%;
     }
 
+    .link {
+        position: absolute;
+        bottom: 0;
+    }
+
     /* For devices with width greater than or equal to 769px, like desktop computers */
     @media only screen 
         and (min-width: 768px) {
 
-            .item-wrapper {
-                justify-content: space-evenly;
-            }
+        .link {
+            position: relative;
+        }
+
+        .item-wrapper {
+            justify-content: space-evenly;
+        }
 
     }
 
@@ -31,18 +40,18 @@ const ProjectsStyles = styled.div`
     @media only screen 
         and (min-width: 992px) {
 
-            .item-wrapper {
-                flex-wrap: wrap;
-            }
+        .item-wrapper {
+            flex-wrap: wrap;
+        }
 
-            .item {
-                min-width: 20%;
-                flex: 1;
-            }
+        .item {
+            min-width: 20%;
+            flex: 1;
+        }
 
-            .four p.link {
-                position: relative;
-            }
+        .link {
+            position: absolute;
+        }
 
     }
 
@@ -50,13 +59,13 @@ const ProjectsStyles = styled.div`
     @media only screen 
         and (min-width: 1280px) {
 
-            .item-wrapper {
-                flex-wrap: nowrap;
-            }
+        .item-wrapper {
+            flex-wrap: nowrap;
+        }
 
-            .four p.link {
-                position: absolute;
-            }
+        .four p.link {
+            position: absolute;
+        }
 
     }
   

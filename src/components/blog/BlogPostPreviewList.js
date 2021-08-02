@@ -56,6 +56,12 @@ const BlogPostPreviewListStyles = styled.div`
             background-color: var(--primary);
 
             overflow: hidden;
+            box-shadow: 20px 20px rgba(85,122,149,.15);
+            transition: all .4s ease;
+
+            &:hover {
+                box-shadow: 10px 10px rgba(85,122,149,.25);
+            }
 
             &::after {
                 content: none;
@@ -126,7 +132,6 @@ const BlogPostPreviewListStyles = styled.div`
         }
 
     }
-
 
 `;
 

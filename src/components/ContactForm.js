@@ -12,6 +12,11 @@ const ContactFormStyles = styled.div`
         padding: 25px;
         margin: 3em auto;
         color: var(--white);
+        box-shadow: 20px 20px rgba(85,122,149,.15);
+        transition: all .4s ease;
+        &:hover {
+            box-shadow: 10px 10px rgba(85,122,149,.25);
+        }
         textarea {
             min-height: 5em;
             resize: none;
@@ -58,15 +63,15 @@ const ContactFormStyles = styled.div`
     @media only screen
         and (min-width: 768px) {
 
-            form {
-                width: 60%;
-                p {
-                    text-align: center;
-                }
-                input, textarea {
-                    width: 90%; 
-                }
+        form {
+            width: 60%;
+            p {
+                text-align: center;
             }
+            input, textarea {
+                width: 90%; 
+            }
+        }
 
     }
 
