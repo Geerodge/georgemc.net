@@ -5,11 +5,11 @@ import background from "../images/sky-clouds.jpg"
 
 const HeroStyles = styled.div`
 
-    --color-1: #FFFF;
-    --color-2: #FFFF;
-    --color-3: #FFFF;
-    --color-4: #FFFF;
-    --color-5: #FFFF;
+    --color-1: var(--white);
+    --color-2: var(--white);
+    --color-3: var(--white);
+    --color-4: var(--white);
+    --color-5: var(--white);
 
     .hero-text {
         line-height: 1;
@@ -17,7 +17,6 @@ const HeroStyles = styled.div`
         display: grid;
         place-items: center;
         min-height: calc(95vh - 16px);
-        border-top: 1px solid var(--white);
 
         h1 {
             font-family: "Exo", sans-serif;
@@ -80,7 +79,18 @@ const HeroStyles = styled.div`
 
         .hero-text{
             h1 {
-                font-size: 5vw;
+                font-size: 10vw;
+            }
+        }
+    }
+
+    /* For devices with width greater than or equal to 1200px, like desktop computers */
+    @media only screen 
+        and (min-width: 1200px) {
+
+        .hero-text{
+            h1 {
+                font-size: 7vw;
             }
         }
     }

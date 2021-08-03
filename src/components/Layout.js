@@ -3,7 +3,7 @@ import styled from "styled-components";
 import GlobalStyles from "../styles/GlobalStyles";
 import Header from "./Header";
 import Footer from "./Footer";
-import Hero from "./Hero";
+import Clouds from "./Clouds";
 
 const LayoutStyles = styled.div`
 
@@ -17,7 +17,7 @@ const LayoutStyles = styled.div`
         / 1fr;
     grid-gap: 0;
     justify-content: center;
-    margin: auto
+    margin: auto;
   }
 
   .header {
@@ -33,6 +33,7 @@ const LayoutStyles = styled.div`
   .body {
     grid-area: body;
     max-width: 1280px;
+    min-height: calc(100vh - 255px);
     margin: 0 auto;
   }
 
@@ -47,7 +48,7 @@ const Layout = ({ children }) => {
     // Check if it's the homepage to display Hero component
     function isHome() {
         if (window.location.pathname === "/") {
-            return <div className="hero"><Hero /></div>
+            return <div className="hero"><Clouds /></div>
         } 
     }
 
@@ -55,15 +56,15 @@ const Layout = ({ children }) => {
         <>
         <GlobalStyles />
         <LayoutStyles>
-            <section className='myGrid'>
-                <div className='header'>
+            <section className="myGrid">
+                <div className="header">
                     <Header />
                 </div>
                 {isHome()}
-                <div className='body'>
+                <div className="body">
                     {children}
                 </div>
-                <div className='footer'>
+                <div className="footer">
                     <Footer />
                 </div>
             </section>

@@ -61,7 +61,7 @@ const About = () => (
         <div className="item-wrapper">
             <div className="item one">
                 <h1>About</h1>
-                <p>I'm a New Zealand-born web developer based in North Devon, UK.</p>
+                <p>I'm a New Zealand-born 🇳🇿 web developer based in 🇬🇧 North Devon, UK.</p> 
                 <p><span className="highlight">I love to help people grow their businesses and projects</span>. I've been building websites and working in the IT industry for over 10 years <span role="img" aria-label="Nerd Face">🤓</span> <span role="img" aria-label="Thumb Up Sign">👍</span> </p>
                 <p>My background includes creating websites for small and midsize businesses, search engine optimisation (SEO), conversion rate optimization (CRO) and email marketing.</p>
                 <p>Visit my <a href="https://www.notion.so/George-McEntegart-54f946adb15d4ababfad7b490f1183ff" target="_blank" rel="noopener noreferrer">Notion</a> for more details.</p>

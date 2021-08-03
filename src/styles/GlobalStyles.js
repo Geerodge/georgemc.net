@@ -22,6 +22,13 @@ const GlobalStyles = createGlobalStyle`
     font-size: 10px;
 
   }
+
+  html {
+    background: #c9dbe9;
+    background: -webkit-linear-gradient(top, #c9dbe9 0%, #fff 60%);
+    background: -linear-gradient(top, #c9dbe9 0%, #fff 60%);
+    background: -moz-linear-gradient(top, #c9dbe9 0%, #fff 60%);
+  }
   
   body {
     font-family: "Open Sans", sans-serif;

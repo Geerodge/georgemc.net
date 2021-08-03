@@ -8,6 +8,11 @@ const BlogAuthorStyles = styled.div`
     color: var(--white);
     padding: 1em;
     text-align: center;
+    box-shadow: 10px 10px rgba(85,122,149,.15);
+    transition: all .4s ease;
+    &:hover {
+        box-shadow: 5px 10px rgba(85,122,149,.25);
+    }
 
     h4, h3 {
         color: var(--white);
@@ -29,23 +34,35 @@ const BlogAuthorStyles = styled.div`
     @media only screen
         and (min-width: 992px) {
 
-            .author {
-                display: flex;
-                align-items: center;
-                align-content: center;
-                margin: 0 auto;
-                width: 100%;
-            }
-            
-            .bio {
-                margin-left: 1em;
-                h4 {
-                    color: var(--white);
-                    margin: 0;
-                }
-            }
-
+        .author {
+            display: flex;
+            align-items: center;
+            align-content: center;
+            margin: 0 auto;
+            width: 100%;
         }
+        
+        .bio {
+            margin-left: 1em;
+            h4 {
+                color: var(--white);
+                margin: 0;
+            }
+        }
+
+    }
+
+    /* For devices with width greater than or equal to 1200px, like landscape tablets and laptops */
+    @media only screen
+        and (min-width: 1200px) {
+
+        box-shadow: 20px 20px rgba(85,122,149,.15);
+        transition: all .4s ease;
+        &:hover {
+            box-shadow: 10px 10px rgba(85,122,149,.25);
+        }
+
+    }
 
 
 `;

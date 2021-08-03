@@ -1,7 +1,10 @@
+import { FaPenAlt as icon } from 'react-icons/fa';
+
 export default {
   name: 'post',
   title: 'Post',
   type: 'document',
+  icon,
   fields: [
     {
       name: 'title',
