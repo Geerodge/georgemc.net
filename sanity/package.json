@@ -16,6 +16,7 @@
   "dependencies": {
     "@sanity/base": "^2.13.0",
     "@sanity/block-content-to-react": "^3.0.0",
+    "@sanity/code-input": "^2.13.1",
     "@sanity/components": "^2.13.0",
     "@sanity/core": "^2.13.0",
     "@sanity/default-layout": "^2.13.0",

@@ -7,6 +7,8 @@ import BlogDate from "../components/blog/BlogDate";
 import BlogCategories from "../components/blog/BlogCategories";
 import BlogAuthor from "../components/blog/BlogAuthor";
 import BlogImage from "../components/blog/BlogImage";
+import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { coldarkDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 const BlogStyles = styled.div`
 
@@ -16,11 +18,32 @@ const BlogStyles = styled.div`
         line-height: 1.2em;
     }
 
+    /* Code in text */
+    p > code,
+    li > code,
+    dd > code,
+    td > code {
+        background-color: rgb(115, 149, 174, .3);
+        word-wrap: break-word;
+        box-decoration-break: clone;
+        padding: .1rem .3rem .2rem;
+        border-radius: .2rem;
+    }
+
 `;
 
 // Data is passed in via context in gatsby-node.js
 export default function BlogPosts({ pageContext: { data } }) {
-
+    const serializers = {
+        types: {
+            code: (props) => (
+                <SyntaxHighlighter language={props.node.language} style={coldarkDark}>
+                    {props.node.code}
+                </SyntaxHighlighter>
+            ),
+        },
+    }
+    console.log(data);
     return (
       <Layout>
         <BlogStyles>
@@ -38,6 +61,7 @@ export default function BlogPosts({ pageContext: { data } }) {
           />
           <BlockContent
             blocks={data._rawBody}
+            serializers={serializers}
           />
           <BlogCategories
             categories={data.categories}
