@@ -10,8 +10,8 @@ These instructions will get you a copy of the project up and running on your loc
 
 You will need to install the following applications and versions.
 
-* Gatsby v2.26.1
-* React v16.12.0
+* Gatsby v3.10.2
+* React v16.14.0
 * Node.js v15.5.0
 * Sanity v2.13.0
 
