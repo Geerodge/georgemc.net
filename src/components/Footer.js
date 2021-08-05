@@ -47,27 +47,25 @@ const FooterStyles = styled.div`
 const Footer = () => {
     return (
         <FooterStyles>
-            <div className="footer-wrapper">
-                <footer>
-                    <p className="love">Things I <span role="img" aria-label="Heart">&#x2764;&#xFE0F;</span> <ReactRotatingText items={[`Open Source`, `Nature`, `Web 3.0`, `Music`,`Ethereum`, `Wine`, `Learning and building new things`, `Dogs`, `The Beach`, `Gaming`]} eraseMode="erase" pause={2000} /></p>
-                    © {new Date().getFullYear()} George McEntegart<br />
-                    <a href="https://github.com/Geerodge" target="_blank" rel="noreferrer">
-                        <FaGithub className="icons" />
-                    </a>
-                    <a href="https://twitter.com/geerodge" target="_blank" rel="noreferrer">
-                        <FaTwitter className="icons" />
-                    </a>
-                    <a href="https://www.linkedin.com/in/georgemcentegart/" target="_blank" rel="noreferrer">
-                        <FaLinkedin className="icons" />
-                    </a>
-                    <a href="https://www.instagram.com/geerodge" target="_blank" rel="noreferrer">
-                        <FaInstagram className="icons" />
-                    </a>
-                    <a href="mailto:geerodge@gmail.com">
-                        <SiMinutemailer className="icons" />
-                    </a>
-                </footer>
-            </div>
+            <footer>
+                <p className="love">Things I <span role="img" aria-label="Heart">&#x2764;&#xFE0F;</span> <ReactRotatingText items={[`Open Source`, `Nature`, `Web 3.0`, `Music`,`Ethereum`, `Wine`, `Learning and building new things`, `Dogs`, `The Beach`, `Gaming`]} eraseMode="erase" pause={2000} /></p>
+                © {new Date().getFullYear()} George McEntegart<br />
+                <a href="https://github.com/Geerodge" target="_blank" rel="noreferrer">
+                    <FaGithub className="icons" />
+                </a>
+                <a href="https://twitter.com/geerodge" target="_blank" rel="noreferrer">
+                    <FaTwitter className="icons" />
+                </a>
+                <a href="https://www.linkedin.com/in/georgemcentegart/" target="_blank" rel="noreferrer">
+                    <FaLinkedin className="icons" />
+                </a>
+                <a href="https://www.instagram.com/geerodge" target="_blank" rel="noreferrer">
+                    <FaInstagram className="icons" />
+                </a>
+                <a href="mailto:geerodge@gmail.com">
+                    <SiMinutemailer className="icons" />
+                </a>
+            </footer>
         </FooterStyles>
     )
 }

@@ -37,7 +37,7 @@ const LayoutStyles = styled.div`
     margin: 0 auto;
   }
 
-  .footer-wrapper {
+  .footer {
     grid-area: footer;
   }
 
@@ -67,7 +67,7 @@ const Layout = ({ children }) => {
                 <div className="body">
                     {children}
                 </div>
-                <div className="footer-wrapper">
+                <div className="footer">
                     <Footer />
                 </div>
             </section>
