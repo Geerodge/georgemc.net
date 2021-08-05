@@ -13,22 +13,33 @@ import { coldarkDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 const BlogStyles = styled.div`
 
     margin: 1em;
+    width: calc(100vw - 2em);
 
     h1 {
         line-height: 1.2em;
     }
 
-    /* Code in text */
-    p > code,
-    li > code,
-    dd > code,
-    td > code {
-        background-color: rgb(115, 149, 174, .3);
-        word-wrap: break-word;
-        box-decoration-break: clone;
-        padding: .1rem .3rem .2rem;
-        border-radius: .2rem;
+
+
+    /* For devices with width greater than or equal to 768px, like landscape tablets and laptops */
+    @media only screen
+        and (min-width: 768px) {
+
     }
+
+    /* For devices with width greater than or equal to 992px, like landscape tablets and laptops */
+    @media only screen
+        and (min-width: 992px) {
+
+    }
+
+    /* For devices with width greater than or equal to 1200px, like landscape tablets and laptops */
+    @media only screen
+        and (min-width: 1200px) {
+
+
+    }
+
 
 `;
 

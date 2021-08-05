@@ -10,6 +10,7 @@ const BlogCategories = (props) => (
 
     <CategoryStyles>
         <p>
+            <strong>Categories: </strong>
             {props.categories.map((category, i) => {
                 const lastIndex = props.categories.length - 1;
                 if (i === lastIndex) {
