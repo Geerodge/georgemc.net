@@ -47,7 +47,7 @@ const Layout = ({ children }) => {
 
     // Check if it's the homepage to display Hero component
     function isHome() {
-        if (typeof window !== `undefined` && window.location.pathname === "/") {
+        if (typeof window !== `undefined` && window.location.pathname === `/`) {
             return <div className="hero"><Clouds /></div>
         }
     }
