@@ -46,11 +46,7 @@ const LayoutStyles = styled.div`
 const Layout = ({ children }) => {
 
     // Check if it's the homepage to display Hero component
-    function isHome() {
-        if (typeof window !== `undefined` && window.location.pathname === `/`) {
-            return <div className="hero"><Clouds /></div>
-        }
-    }
+    const isHome = () => window && window.location.pathname;
 
     return (
         <>
@@ -60,7 +56,7 @@ const Layout = ({ children }) => {
                 <div className="header">
                     <Header />
                 </div>
-                {/* {isHome()} */}
+                {isHome() && <div className="hero"><Clouds /></div>}
                 <div className="body">
                     {children}
                 </div>
