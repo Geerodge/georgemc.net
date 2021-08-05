@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { FaGithub, FaTwitter, FaLinkedin, FaInstagram } from 'react-icons/fa';
-import { SiMinutemailer } from 'react-icons/si';
+import { FaGithub, FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { SiMinutemailer } from "react-icons/si";
 import ReactRotatingText from "react-rotating-text";
 
 const FooterStyles = styled.div`
@@ -47,7 +47,7 @@ const FooterStyles = styled.div`
 const Footer = () => {
     return (
         <FooterStyles>
-            <div className="footer">
+            <div className="footer-wrapper">
                 <footer>
                     <p className="love">Things I <span role="img" aria-label="Heart">&#x2764;&#xFE0F;</span> <ReactRotatingText items={[`Open Source`, `Nature`, `Web 3.0`, `Music`,`Ethereum`, `Wine`, `Learning and building new things`, `Dogs`, `The Beach`, `Gaming`]} eraseMode="erase" pause={2000} /></p>
                     © {new Date().getFullYear()} George McEntegart<br />
