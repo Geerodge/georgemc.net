@@ -47,6 +47,10 @@ const ContactFormStyles = styled.div`
         }
     }
 
+    input:placeholder-shown, textarea:placeholder-shown {
+        color: var(--white);
+    }
+
     /* For devices with width greater than or equal to 769px, like landscape tablets and laptops */
     @media only screen
         and (min-width: 768px) {
