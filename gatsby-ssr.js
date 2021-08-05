@@ -1,8 +1,7 @@
-import React from "react";
-import Layout from "./src/components/Layout";
+/**
+ * Implement Gatsby's SSR (Server Side Rendering) APIs in this file.
+ *
+ * See: https://www.gatsbyjs.com/docs/ssr-apis/
+ */
 
-export function wrapPageElement({ element, props }) {
-    return (
-        <Layout {...props}>{element}</Layout>
-    )
-}
+// You can delete this file if you're not using it
