@@ -60,7 +60,7 @@ const Layout = ({ children }) => {
                 <div className="header">
                     <Header />
                 </div>
-                {isHome()}
+                {/* {isHome()} */}
                 <div className="body">
                     {children}
                 </div>
