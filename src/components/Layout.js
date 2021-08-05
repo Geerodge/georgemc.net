@@ -46,7 +46,7 @@ const LayoutStyles = styled.div`
 const Layout = ({ children }) => {
 
     // Check if it's the homepage to display Hero component
-    const isHome = () => window !== "undefined" && window.location.pathname;
+    const isHome = () => typeof window !== "undefined" && window.location.pathname;
 
     return (
         <>
