@@ -43,7 +43,6 @@ export default function BlogPosts({ pageContext: { data } }) {
             ),
         },
     }
-    console.log(data);
     return (
       <Layout>
         <BlogStyles>

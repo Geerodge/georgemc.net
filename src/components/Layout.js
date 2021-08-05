@@ -45,11 +45,14 @@ const LayoutStyles = styled.div`
 
 const Layout = ({ children }) => {
 
+    // Check if window is defined (so if in the browser or in node.js).
+    const isBrowser = typeof window !== "undefined"
+
     // Check if it's the homepage to display Hero component
     function isHome() {
-        if (window.location.pathname === "/") {
+        if (isBrowser && window.location.pathname === "/") {
             return <div className="hero"><Clouds /></div>
-        } 
+        }
     }
 
     return (
