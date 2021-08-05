@@ -11,8 +11,6 @@ const IndexPage = () => (
       title="Home"
       description="I create attractive websites and web applications that make your business grow."
     />
-    {/* Hero is located in Layout */}
-    {/* <Intro /> */}
     <Services />
     <About />
     <Projects />
