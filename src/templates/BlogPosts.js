@@ -14,6 +14,7 @@ const BlogStyles = styled.div`
 
     margin: 1em;
     width: calc(100vw - 2em);
+    max-width: 100%;
 
     h1 {
         line-height: 1.2em;
@@ -30,6 +31,8 @@ const BlogStyles = styled.div`
     /* For devices with width greater than or equal to 992px, like landscape tablets and laptops */
     @media only screen
         and (min-width: 992px) {
+
+        max-width: 100%;
 
     }
 
