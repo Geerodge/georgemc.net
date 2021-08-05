@@ -20,30 +20,6 @@ const BlogStyles = styled.div`
         line-height: 1.2em;
     }
 
-
-
-    /* For devices with width greater than or equal to 768px, like landscape tablets and laptops */
-    @media only screen
-        and (min-width: 768px) {
-
-    }
-
-    /* For devices with width greater than or equal to 992px, like landscape tablets and laptops */
-    @media only screen
-        and (min-width: 992px) {
-
-        max-width: 100%;
-
-    }
-
-    /* For devices with width greater than or equal to 1200px, like landscape tablets and laptops */
-    @media only screen
-        and (min-width: 1200px) {
-
-
-    }
-
-
 `;
 
 // Data is passed in via context in gatsby-node.js
