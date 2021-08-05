@@ -228,40 +228,49 @@ const HeroStyles = styled.div`
 
 `;
 
-const Hero = () => (
+const Hero = () => {
 
-    <HeroStyles>
-        <div id="background-wrap">
-            <div className="x1">
-                <div className="cloud"></div>
-            </div>
+    // Check if window is defined (so if in the browser or in node.js).
+    const isBrowser = typeof window !== "undefined";
+    
+    if (isBrowser && window.location.pathname === `/`) {
+        return (
+            <HeroStyles>
+                <div id="background-wrap">
+                    <div className="x1">
+                        <div className="cloud"></div>
+                    </div>
 
-            <div className="x2">
-                <div className="cloud"></div>
-            </div>
+                    <div className="x2">
+                        <div className="cloud"></div>
+                    </div>
 
-            <div className="x3">
-                <div className="cloud"></div>
-            </div>
+                    <div className="x3">
+                        <div className="cloud"></div>
+                    </div>
 
-            <div className="x4">
-                <div className="cloud"></div>
-            </div>
+                    <div className="x4">
+                        <div className="cloud"></div>
+                    </div>
 
-            <div className="x5">
-                <div className="cloud"></div>
-            </div>
-        </div>
-        <div className="hero-text">
-            <h1>Hi, I'm George</h1>
-            <h2>I create attractive websites that make your business grow...</h2>
-            <Link to="/contact" target="_blank" rel="noreferrer">
-                <button className="primary">Contact now</button>
-            </Link>
-            <i className="arrow down"></i>
-        </div>
-    </HeroStyles>
+                    <div className="x5">
+                        <div className="cloud"></div>
+                    </div>
+                </div>
+                <div className="hero-text">
+                    <h1>Hi, I'm George</h1>
+                    <h2>I create attractive websites that make your business grow...</h2>
+                    <Link to="/contact" target="_blank" rel="noreferrer">
+                        <button className="primary">Contact now</button>
+                    </Link>
+                    <i className="arrow down"></i>
+                </div>
+            </HeroStyles>
+        )
+    }
 
-)
+    return null
+
+}
 
 export default Hero;
