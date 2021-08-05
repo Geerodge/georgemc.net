@@ -47,7 +47,10 @@ const ContactFormStyles = styled.div`
         }
     }
 
-    input:placeholder-shown, textarea:placeholder-shown {
+    input::placeholder,
+    textarea::placeholder,
+    input:placeholder-shown,
+    textarea:placeholder-shown {
         color: var(--white);
     }
 
