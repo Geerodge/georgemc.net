@@ -28,6 +28,7 @@ const LayoutStyles = styled.div`
 
   .hero {
     grid-area: hero;
+    min-height: calc(95vh - 16px); // Stops the css flash like loading
   }
 
   .body {
