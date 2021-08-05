@@ -4,7 +4,6 @@ import Seo from "../components/Seo";
 import ContactForm from "../components/ContactForm";
 import styled from "styled-components";
 
-
 const ContactPageStyles = styled.div`
 
     margin: 2em 1em;
