@@ -12,10 +12,10 @@ export default function BlogPage({ data: { allSanityPost } }) {
     <Layout>
       <Seo 
         title="Blog"
-        description="I write about web development and things I've learnt building websites."
+        description="I write about web development, wed design and all about things I've learnt building websites and working with amazing people."
       />
       <BlogPostPreviewList
-        title="Latest blog posts"
+        title="Latest Blog Posts"
         data={blogData}
       />
     </Layout>

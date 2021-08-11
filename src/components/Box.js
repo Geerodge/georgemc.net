@@ -13,13 +13,13 @@ const Box = ({ heading, description, icon }) => (
                     return (
                         <FaMobileAlt size={50} />
                         )
-                    } else if (icon === "tools") {
-                        return (
-                            <FaTools size={50} />
-                            )
-                        } else {
-                        }
-                    })()}
+                } else if (icon === "tools") {
+                    return (
+                        <FaTools size={50} />
+                        )
+                }
+            }
+        )()}
         <h3>{heading}</h3>
         <p>{description}</p>
     </>
