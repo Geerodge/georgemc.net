@@ -29,6 +29,7 @@ const BlogPostPreviewListStyles = styled.div`
 
     .post {
         margin-top: 2em;
+        width: 90%;
         &::after {
             content:"";
             display: block;
