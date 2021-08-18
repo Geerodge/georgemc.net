@@ -19,7 +19,7 @@ export default function ReviewsPage({ data: { allSanityReview } }) {
         <Layout>
             <ReviewsStyles>
             <Seo 
-                title="Website Design Reviews, Devon"
+                title="Website Design Reviews Devon"
                 description="Here is a collection of my website reviews to date. Lots of happy clients!"
             />
             <h1>Web Design Reviews</h1>
