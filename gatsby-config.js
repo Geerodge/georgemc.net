@@ -43,6 +43,7 @@ module.exports = {
       options: {
         projectId: `3rtiop9p`,
         dataset: `production`,
+        apiVersion: 'v2021-08-18', // use a UTC date string
         token: process.env.SANITY_TOKEN,
       },
     },
