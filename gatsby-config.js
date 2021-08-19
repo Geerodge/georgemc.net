@@ -47,5 +47,14 @@ module.exports = {
         token: process.env.SANITY_TOKEN,
       },
     },
+    // Removed during dev as its slow to build
+    {
+      resolve: `gatsby-plugin-prettier-build`,
+      options: {
+        types: ['html'],
+        concurrency: 20,
+        verbose: true,
+      },
+    },
   ],
 }
