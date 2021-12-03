@@ -65,7 +65,7 @@ const MorphStyles = styled.div`
 const ImageMorph = () => {
   const data = useStaticQuery(graphql`
       query {
-        placeholderImage: file(relativePath: { eq: "george-mcentegart.jpg" }) {
+        placeholderImage: file(relativePath: { eq: "george-mcentegart-beach.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 800) {
               ...GatsbyImageSharpFluid
