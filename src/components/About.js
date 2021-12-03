@@ -67,7 +67,7 @@ const About = () => (
                 <p>Visit my <a href="https://www.notion.so/George-McEntegart-54f946adb15d4ababfad7b490f1183ff" target="_blank" rel="noopener noreferrer">Notion</a> for more details.</p>
             </div>
             <div className="item two">
-                <ImageMorph name="george-mcentegart.jpg" />
+                <ImageMorph name="george-mcentegart-beach.jpg" />
             </div>
         </div>
     </AboutStyles>
