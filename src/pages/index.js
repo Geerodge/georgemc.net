@@ -9,7 +9,7 @@ const IndexPage = () => (
   <Layout>
     <Seo 
       title="Home"
-      description="I create attractive websites and web applications that make your business grow."
+      description="I create attractive websites that make your business grow."
     />
     <Services />
     <About />
