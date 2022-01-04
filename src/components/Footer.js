@@ -62,7 +62,7 @@ const Footer = () => {
                 <a href="https://www.instagram.com/geerodge" target="_blank" rel="noreferrer">
                     <FaInstagram className="icons" />
                 </a>
-                <a href="mailto:geerodge@gmail.com">
+                <a href="mailto:contact@georgemc.net">
                     <SiMinutemailer className="icons" />
                 </a>
             </footer>

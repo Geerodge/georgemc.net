@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { AiFillStar } from 'react-icons/ai';
+import SplitText from "./SplitText";
 
 const ReviewStyles = styled.div`
 
@@ -25,6 +26,29 @@ const ReviewStyles = styled.div`
         padding: .5em 0;
     }
 
+    h3 span span {
+        color: var(--white);
+        position: relative;
+        bottom: -1em;
+        opacity: 0;
+        animation: move-text 0.5s forwards;
+        animation-timing-function: ease-in-out;
+    }
+
+    @keyframes move-text {
+        0% {
+            bottom: -0.2em;
+            opacity: 1;
+        }
+        50% {
+            bottom: 0.2em;
+        }
+        100% {
+            bottom: 0;
+            opacity: 1;
+        }
+    }
+
 `;
 
 const Review = (props) => {
@@ -40,7 +64,11 @@ const Review = (props) => {
                         <AiFillStar />
                         <AiFillStar />
                     </div>
-                    <h3>{props.data[i].reviewer}</h3>
+                    {/* <h3>{WrapCharactersInSpan(props.data[i].reviewer)}</h3> */}
+                    <h3><SplitText
+                        copy={props.data[i].reviewer}
+                        role=''
+                    /></h3>
                     <h4>{props.data[i].company}</h4>
                 </div>
             ))}
