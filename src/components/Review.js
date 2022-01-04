@@ -65,10 +65,12 @@ const Review = (props) => {
                         <AiFillStar />
                     </div>
                     {/* <h3>{WrapCharactersInSpan(props.data[i].reviewer)}</h3> */}
-                    <h3><SplitText
-                        copy={props.data[i].reviewer}
-                        role=''
-                    /></h3>
+                    <h3>
+                        <SplitText
+                            copy={props.data[i].reviewer}
+                            role=''
+                        />
+                    </h3>
                     <h4>{props.data[i].company}</h4>
                 </div>
             ))}

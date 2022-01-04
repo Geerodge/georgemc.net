@@ -94,7 +94,7 @@ const BlogPostPreviewListStyles = styled.div`
                 border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%;
             }
             &:nth-child(even) .gatsby-image-wrapper {
-                animation: morphing-even 10s infinite;
+                animation: morphing-even 8s infinite;
                 &:hover {
                     animation-play-state: paused;
                 }
@@ -105,7 +105,7 @@ const BlogPostPreviewListStyles = styled.div`
                 border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%;
             }
             &:nth-child(odd) .gatsby-image-wrapper {
-                animation: morphing-odd 10s infinite;
+                animation: morphing-odd 9s infinite;
                 &:hover {
                     animation-play-state: paused;
                 }
