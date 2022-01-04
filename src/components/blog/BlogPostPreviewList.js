@@ -93,10 +93,22 @@ const BlogPostPreviewListStyles = styled.div`
             &:nth-child(even) .left .block-color {
                 border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%;
             }
+            &:nth-child(even) .gatsby-image-wrapper {
+                animation: morphing-even 10s infinite;
+                &:hover {
+                    animation-play-state: paused;
+                }
+            }
 
             // Odd numbered blog posts
             &:nth-child(odd) .left .gatsby-image-wrapper {
                 border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%;
+            }
+            &:nth-child(odd) .gatsby-image-wrapper {
+                animation: morphing-odd 10s infinite;
+                &:hover {
+                    animation-play-state: paused;
+                }
             }
 
             // Every third blog post
@@ -106,7 +118,81 @@ const BlogPostPreviewListStyles = styled.div`
             &:nth-child(3n+0) .left .block-color {
                 border-radius: 100% 50% 60% 50% / 80% 30% 100% 35%;
             }
+            &:nth-child(3n+0) .gatsby-image-wrapper {
+                animation: morphing-misc 10s infinite;
+                &:hover {
+                    animation-play-state: paused;
+                }
+            }
 
+        }
+    }
+
+    /* Image Effect */
+    .morphing:hover {
+        animation-play-state: paused;
+    }
+
+    @keyframes morphing-even {
+        0% {
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+        }
+        25% {
+            border-radius: 50% 70% 50% 50% / 70% 60% 50% 50%;
+            box-shadow: -30x -30x -20x rgba(0,0,0,0.25);
+        }
+        50% {
+            border-radius: 50% 40% 50% 80% / 50% 45% 70% 50%;
+            box-shadow: -15px -15px -50px rgba(0,0,0,0.25);
+        }
+        70% {
+            border-radius: 50% 50% 50% 70% / 50% 50% 70% 60%;
+            box-shadow: -15px -15px -50px rgba(0,0,0,0.25);
+        }
+        100% {
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+        }
+    }
+
+    @keyframes morphing-odd {
+        0% {
+            border-radius: 30% 30% 70% 70% / 30% 70% 70% 30%;
+        }
+        25% {
+            border-radius: 70% 60% 50% 50% / 50% 70% 50% 50%;
+            box-shadow: -30x -30x -20x rgba(0,0,0,0.25);
+        }
+        50% {
+            border-radius: 50% 45% 70% 50% / 50% 40% 50% 80%;
+            box-shadow: -15px -15px -50px rgba(0,0,0,0.25);
+        }
+        70% {
+            border-radius: 50% 50% 70% 60% / 50% 50% 50% 70%;
+            box-shadow: -15px -15px -50px rgba(0,0,0,0.25);
+        }
+        100% {
+            border-radius: 30% 30% 70% 70% / 30% 70% 70% 30%;
+        }
+    }
+
+    @keyframes morphing-misc {
+        0% {
+            border-radius: 50% 50% 70% 60% / 50% 50% 50% 70%;
+        }
+        25% {
+            border-radius: 70% 60% 50% 50% / 50% 70% 50% 50%;
+            box-shadow: -30x -30x -20x rgba(0,0,0,0.25);
+        }
+        50% {
+            border-radius: 30% 30% 70% 70% / 30% 70% 70% 30%;
+            box-shadow: -15px -15px -50px rgba(0,0,0,0.25);
+        }
+        70% {
+            border-radius: 70% 60% 50% 50% / 50% 70% 50% 50%;
+            box-shadow: -15px -15px -50px rgba(0,0,0,0.25);
+        }
+        100% {
+            border-radius: 30% 30% 70% 70% / 30% 70% 70% 30%;
         }
     }
 

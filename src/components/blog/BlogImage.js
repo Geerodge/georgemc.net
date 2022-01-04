@@ -16,9 +16,7 @@ function checkForMainBlogImage(data) {
 }
 
 const BlogImage = (props) => (
-
-        checkForMainBlogImage(props.data)
-
+    checkForMainBlogImage(props.data)
 )
 
 export default BlogImage;
