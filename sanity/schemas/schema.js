@@ -11,6 +11,7 @@ import post from './post'
 import author from './author'
 import imagealt from './imageAlt'
 import review from './review'
+import youtube from './youtube'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -29,5 +30,6 @@ export default createSchema({
     blockContent,
     imagealt,
     review,
+    youtube,
   ]),
 })

@@ -68,5 +68,9 @@ export default {
       type: 'code',
       title: 'Code example'
     },
+    {
+      type: 'youtube',
+      title: 'YouTube embed'
+    }
   ],
 }

@@ -9,6 +9,8 @@ import BlogAuthor from "../components/blog/BlogAuthor";
 import BlogImage from "../components/blog/BlogImage";
 import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { coldarkDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import getYouTubeId from 'get-youtube-id'
+import YouTube from 'react-youtube'
 
 const BlogStyles = styled.div`
 
@@ -31,6 +33,11 @@ export default function BlogPosts({ pageContext: { data } }) {
                     {props.node.code}
                 </SyntaxHighlighter>
             ),
+            youtube: ({node}) => {
+              const { url } = node
+              const id = getYouTubeId(url)
+              return (<YouTube videoId={id} />)
+            }
         },
     }
     return (
@@ -51,6 +58,8 @@ export default function BlogPosts({ pageContext: { data } }) {
           <BlockContent
             blocks={data._rawBody}
             serializers={serializers}
+            projectId={'3rtiop9p'}
+            dataset={'production'}
           />
           <BlogCategories
             categories={data.categories}
