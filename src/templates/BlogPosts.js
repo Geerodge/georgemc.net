@@ -9,8 +9,8 @@ import BlogAuthor from "../components/blog/BlogAuthor";
 import BlogImage from "../components/blog/BlogImage";
 import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { coldarkDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
-import getYouTubeId from 'get-youtube-id'
-import YouTube from 'react-youtube'
+import getYouTubeId from 'get-youtube-id';
+import YouTube from 'react-youtube';
 
 const BlogStyles = styled.div`
 
