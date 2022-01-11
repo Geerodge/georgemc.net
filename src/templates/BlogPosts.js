@@ -19,8 +19,14 @@ const BlogStyles = styled.div`
     max-width: 100%;
 
     h1 {
-        line-height: 1.2em;
+      line-height: 1.2em;
     }
+
+    img,
+    iframe,
+    figure {
+      max-width: 100%;
+    } 
 
 `;
 
