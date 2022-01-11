@@ -232,7 +232,7 @@ const BlogPostPreviewList = (props) => (
     <BlogPostPreviewListStyles>
         <h1>{props.title}</h1>
         <div className="container">
-            {props.data.map((post, i) => (
+            {props.data.reverse().map((post, i) => (
                 <div className="post" key={post.toString()}>
                     <div className="left">
                         <div className="block-color">
