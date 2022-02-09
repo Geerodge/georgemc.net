@@ -26,8 +26,23 @@ const BlogStyles = styled.div`
     iframe,
     figure {
       max-width: 100%;
-    } 
+    }
+/* 
+    figure {
+      text-align: center;
+    }
+    figure img {
+      margin: 0 auto;
+    } */
 
+    @media only screen 
+      and (min-width: 800px) {
+        .youtube-video {
+          float: left;
+          margin: 2.5%;
+          max-width: 45%;
+        }
+    }
 `;
 
 // Data is passed in via context in gatsby-node.js
@@ -42,7 +57,7 @@ export default function BlogPosts({ pageContext: { data } }) {
             youtube: ({node}) => {
               const { url } = node
               const id = getYouTubeId(url)
-              return (<YouTube videoId={id} />)
+              return (<YouTube containerClassName="youtube-video" videoId={id} />)
             }
         },
     }
