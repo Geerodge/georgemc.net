@@ -43,6 +43,10 @@ const handler = async (event, context) => {
   }
 };
 
+export {
+  handler
+}
+
 //   body: JSON.stringify({
 //     profiles: [
 //       {email: 'george.washington@klaviyo.com'}
