@@ -2,9 +2,9 @@ require("dotenv").config({
   path: `.env`,
 });
 
-import axios from "axios";
+// import axios from "axios";
 
-const handler = async (event, context) => {
+module.exports.handler = async (event, context) => {
   const apiPubKey = process.env.klaviyo_apiPubKey;
   const listId = process.env.klaviyo_listId;
 
@@ -24,7 +24,7 @@ const handler = async (event, context) => {
     const payload = {
       profiles: [{
         email: email
-      }]
+      }],
     }
 
     const { data } = await axios.post(apiEndpoint, payload,
@@ -48,7 +48,3 @@ const handler = async (event, context) => {
     }
   }
 };
-
-export {
-  handler
-}
