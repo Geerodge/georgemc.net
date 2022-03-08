@@ -61,7 +61,7 @@ const SignUpSchema = Yup.object().shape({
     email: Yup.string()
         .email("Invalid email address")
         .required("Email address is required")
-})
+});
 
 const SignUpForm = () => {
     const submitForm = async (values) => {
