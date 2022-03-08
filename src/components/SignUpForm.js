@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import axios from "axios";
-import { Formik, Form, Field, ErrorMessage, FormikHelpers } from "formik";
+import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 
 const SignUpFormStyles = styled.div`
@@ -73,7 +73,7 @@ const SignUpForm = () => {
                 email: email
             };
 
-        await axios.post("./.netlify/functions/add-email-subscriber", payload);
+        await axios.post("/.netlify/functions/add-email-subscriber", payload);
             alert("Contact details were added successfully");
         } catch (error) {
             alert(error.message);
