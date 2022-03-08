@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env`,
+});
+
 import axios from "axios";
 
 const handler = async (event, context) => {
@@ -7,7 +11,7 @@ const handler = async (event, context) => {
   const apiEndpoint = `https://a.klaviyo.com/api/v2/list/${listId}/subscribe`;
 
   const body = JSON.parse(event.body);
-  const { email, g } = body;
+  const { email } = body;
 
   if (!email) {
     return {
@@ -18,8 +22,9 @@ const handler = async (event, context) => {
 
   try {
     const payload = {
-      email,
-      g,
+      profiles: [{
+        email: email
+      }]
     }
 
     const { data } = await axios.post(`${apiEndpoint}?api_key=${apiPubKey}`, payload,
