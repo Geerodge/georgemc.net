@@ -8,7 +8,7 @@ const handler = async (event, context) => {
   const apiPubKey = process.env.klaviyo_apiPubKey;
   const listId = process.env.klaviyo_listId;
 
-  const apiEndpoint = `https://a.klaviyo.com/api/v2/list/${listId}/subscribe`;
+  const apiEndpoint = `https://a.klaviyo.com/api/v2/list/${listId}/subscribe?api_key=${apiPubKey}`;
 
   const body = JSON.parse(event.body);
   const { email } = body;
@@ -27,10 +27,11 @@ const handler = async (event, context) => {
       }]
     }
 
-    const { data } = await axios.post(`${apiEndpoint}?api_key=${apiPubKey}`, payload,
+    const { data } = await axios.post(apiEndpoint, payload,
       {
         headers: {
-          Accept: 'application/json', 'Content-Type': 'application/json',
+          Accept: "application/json",
+          "Content-Type": "application/json",
         },
       }
     );
@@ -47,3 +48,7 @@ const handler = async (event, context) => {
     }
   }
 };
+
+export {
+  handler
+}
