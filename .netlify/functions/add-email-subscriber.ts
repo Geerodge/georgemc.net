@@ -5,8 +5,8 @@ require("dotenv").config({
 import axios from "axios";
 
 const handler = async (event, context) => {
-  const apiPubKey = "UEBgMU"; //put in env vairable
-  const listId = "V3Jynm"; //put in env vairable 
+  const apiPubKey = process.env.klaviyo_apiPubKey;
+  const listId = process.env.klaviyo_listId; 
 
   const apiEndpoint = `https://a.klaviyo.com/api/v2/list/${listId}/subscribe`;
 
