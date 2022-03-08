@@ -2,13 +2,14 @@ require("dotenv").config({
   path: `.env`,
 });
 
-// import axios from "axios";
+import axios from "axios";
 
 module.exports.handler = async (event, context) => {
   const apiPubKey = process.env.klaviyo_apiPubKey;
+  const apiSecret = process.env.klaviyo_apiSecret;
   const listId = process.env.klaviyo_listId;
 
-  const apiEndpoint = `https://a.klaviyo.com/api/v2/list/${listId}/subscribe?api_key=${apiPubKey}`;
+  const apiEndpoint = `https://a.klaviyo.com/api/v2/list/${listId}/subscribe?api_key=${apiSecret}`;
 
   const body = JSON.parse(event.body);
   const { email } = body;
