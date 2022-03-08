@@ -5,16 +5,18 @@ import Projects from "../components/Projects/Projects";
 import About from "../components/About";
 import Services from "../components/Services";
 
-const IndexPage = () => (
-  <Layout>
-    <Seo 
-      title="Home"
-      description="I create attractive websites that make your business grow."
-    />
-    <Services />
-    <About />
-    <Projects />
-  </Layout>
-)
+const IndexPage = () => {
+  return (
+    <Layout>
+      <Seo 
+        title="Home"
+        description="I create attractive websites that make your business grow."
+      />
+      <Services />
+      <About homepage={true} />
+      <Projects />
+    </Layout>
+  )
+}
 
 export default IndexPage;

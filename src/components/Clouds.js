@@ -1,6 +1,7 @@
-import { Link } from "gatsby";
+// import { Link } from "gatsby";
 import React from "react";
 import styled from "styled-components";
+import SignUpForm from "./SignUpForm";
 
 const HeroStyles = styled.div`
 
@@ -15,7 +16,7 @@ const HeroStyles = styled.div`
         min-height: 100%;
         display: grid;
         place-items: center;
-        min-height: calc(95vh - 16px);
+        min-height: calc(95vh - 75px); // Minus the nav/header
 
         h1 {
             font-family: "Exo", sans-serif;
@@ -40,10 +41,23 @@ const HeroStyles = styled.div`
             -webkit-background-clip: text;
             color: transparent;
             text-align: center;
+            padding-top: 25px;
         }
         h2 {
+            font-size: 2.5rem;
             text-align: center;
             color: var(--tertiary);
+            padding: 0 1rem;
+
+            span {
+                font-style: italic;
+                text-decoration: underline;
+            }
+        }
+        p {
+            text-align: center;
+            line-height: 1.5;
+            padding: 0 1rem;
         }
     }
 
@@ -259,10 +273,12 @@ const Hero = () => {
                 </div>
                 <div className="hero-text">
                     <h1>Hi, I'm George</h1>
-                    <h2>I create attractive websites that make your business grow...</h2>
-                    <Link to="/contact" target="_blank" rel="noreferrer">
+                    <h2>Web Development Tips to <span>Supercharge</span> Your Skills</h2>
+                    <p>Practical web development tips and insights that will help you improve your skills.</p>
+                    <SignUpForm />
+                    {/* <Link to="/contact" target="_blank" rel="noreferrer">
                         <button className="primary">Contact now</button>
-                    </Link>
+                    </Link> */}
                     <i className="arrow down"></i>
                 </div>
             </HeroStyles>

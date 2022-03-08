@@ -1,12 +1,5 @@
 import React from "react";
 import Img from "gatsby-image";
-import styled from "styled-components";
-
-const BlogImageStyles = styled.div`
-figure {
-    max-width: 100%;
-}
-`;
 
 // Checks if the main blog image has been added to post in Sanity CMS
 function checkForMainBlogImage(data) {

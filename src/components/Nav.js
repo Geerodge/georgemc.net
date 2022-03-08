@@ -71,7 +71,7 @@ const HeaderStyles = styled.div`
 
     #overlay {
         height: 100vh;
-        width: 100vw;
+        width: 100%;
         background: var(--primary);
         z-index: 2;
         visibility: hidden;
@@ -86,7 +86,7 @@ const HeaderStyles = styled.div`
             flex-direction: column;
             text-align: center;
             height: 100vh;
-            padding-left: 0;
+            padding: 0;
             list-style-type: none;
             li {
                 padding: 1em;

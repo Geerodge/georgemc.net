@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import GlobalStyles from "../styles/GlobalStyles";
-import Header from "./Header";
+import Nav from "./Nav";
 import Footer from "./Footer";
 import Clouds from "./Clouds";
 
@@ -9,12 +9,13 @@ const LayoutStyles = styled.div`
 
   .myGrid {
     display: grid;
+    grid-template-columns: 1fr; 
+    grid-template-rows: 1fr 1fr 1fr 1fr;
     grid: 
-        "header" auto
-        "hero" auto
-        "body" 1fr
-        "footer" auto
-        / 1fr;
+        "header"
+        "hero"
+        "body"
+        "footer";
     grid-gap: 0;
     justify-content: center;
     margin: auto;
@@ -24,6 +25,7 @@ const LayoutStyles = styled.div`
     grid-area: header;
     min-height: 75px;
     background: var(--primary);
+    width: 100vw;
   }
 
   .hero {
@@ -51,7 +53,7 @@ const Layout = ({ children }) => {
         <LayoutStyles>
             <section className="myGrid">
                 <div className="header">
-                    <Header />
+                    <Nav />
                 </div>
                 <div className="hero">
                     <Clouds />

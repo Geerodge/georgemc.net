@@ -39,7 +39,6 @@ const ContactPage = () => (
       />
       <h1>Say Hello <span className="wave" role="img" aria-label="Hand Waving">👋</span></h1>
       <p>Fill out the form below and I'll be in touch as soon as possible.</p>
-      <p>Alternatively, <a href="https://calendly.com/geerodge">schedule a call now</a>.</p>
       <ContactForm />
     </ContactPageStyles>
   </Layout>
