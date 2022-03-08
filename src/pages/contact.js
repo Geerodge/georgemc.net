@@ -27,7 +27,7 @@ const ContactPageStyles = styled.div`
         100% { transform: rotate( 0.0deg) }
     }
 
-
+    
 `;
 
 const ContactPage = () => (
@@ -38,7 +38,7 @@ const ContactPage = () => (
         description="I’m always open to ideas and new opportunities."
       />
       <h1>Say Hello <span className="wave" role="img" aria-label="Hand Waving">👋</span></h1>
-      <p>Fill out the form below and I'll be in touch as soon as possible.</p>
+      <p>I enjoy working with smart and interesting people. If you want to work together or need some help with a project, please contact me directly using the form below.</p>
       <ContactForm />
     </ContactPageStyles>
   </Layout>

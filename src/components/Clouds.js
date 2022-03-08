@@ -273,9 +273,11 @@ const Hero = () => {
                 </div>
                 <div className="hero-text">
                     <h1>Hi, I'm George</h1>
-                    <h2>Web Development Tips to <span>Supercharge</span> Your Skills</h2>
-                    <p>Practical web development tips and insights that will help you improve your skills.</p>
-                    <SignUpForm />
+                    <div>
+                        <h2>Web Development Tips to <span>Supercharge</span> Your Skills</h2>
+                        <p>Practical web development tips and insights that will help you improve your skills.</p>
+                        <SignUpForm />
+                    </div>
                     {/* <Link to="/contact" target="_blank" rel="noreferrer">
                         <button className="primary">Contact now</button>
                     </Link> */}

@@ -13,18 +13,8 @@ const AboutStyles = styled.div`
     }
 
     .two {
-        margin: 1em;
+        padding: 1em;
         width: 100%;
-    }
-
-    /* For devices with width greater than or equal to 768px, like desktop computers */
-    @media only screen 
-        and (min-width: 768px) {
-
-            .two {
-                margin: 1em;
-            }
-
     }
 
     /* For devices with width greater than or equal to 992px, like desktop computers */
@@ -32,17 +22,23 @@ const AboutStyles = styled.div`
         and (min-width: 992px) {
 
         .item-wrapper {
-            flex-wrap: nowrap;
+            flex-direction: row;
         }
 
         .one {
-            flex: 1
+            padding: 2.5%;
+            width: 45%;
         }
 
         .two {
-            flex: 1;
+            padding: 2.5%;
+            width: 45%;
         }
 
+        .three {
+            padding: 2.5%;
+            width: 100%;
+        }
     }
 
     /* For devices with width greater than or equal to 1280px and more, like desktop computers */
@@ -71,6 +67,9 @@ const About = (props) => {
                 </div>
                 <div className="item two">
                     <ImageMorph />
+                </div>
+                <div className="item three">
+                    <h2>How I Can Help You</h2>
                 </div>
             </div>
         </AboutStyles>

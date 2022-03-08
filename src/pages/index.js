@@ -10,7 +10,7 @@ const IndexPage = () => {
     <Layout>
       <Seo 
         title="Home"
-        description="I create attractive websites that make your business grow."
+        description="Practical web development tips and insights that will help you improve your skills."
       />
       <Services />
       <About homepage={true} />
