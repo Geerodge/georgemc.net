@@ -55,6 +55,7 @@ const SignUpFormStyles = styled.div`
     .email {
         margin: 0;
     }
+}
 `;
 
 const SignUpSchema = Yup.object().shape({
@@ -72,7 +73,7 @@ const SignUpForm = () => {
                 email: email
             };
 
-        await axios.post("/.netlify/functions/add-email-subscriber", payload);
+        await axios.post("./.netlify/functions/add-email-subscriber", payload);
             alert("Contact details were added successfully");
         } catch (error) {
             alert(error.message);
