@@ -1,8 +1,9 @@
 import React from "react";
+import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Seo from "../components/Seo";
 import styled from "styled-components";
-import ImageTopCards from "../components/ImageTopCard/ImageTopCards";
+import BlogPostPreviewList from "../components/blog/BlogPostPreviewList";
 
 const FreeGuidesStyles = styled.div`
 
@@ -14,7 +15,10 @@ const FreeGuidesStyles = styled.div`
 
 `;
 
-const FreeGuidesPage = () => {
+export default function FreeGuidesPage({ data: { allSanityPost } }) {
+
+const blogData = allSanityPost.edges;
+
     return (
         <Layout>
             <FreeGuidesStyles>
@@ -24,9 +28,59 @@ const FreeGuidesPage = () => {
             />
             <h1 className="center">Free Guides for Beginner Web Developers</h1>
             <p className="center">I'm on a journey to share what I know and create useful resources for web developers, especially for people just starting out in the industry. I'm continuously learning, but here are some guides that cover what I've learned so far.</p>
-            <ImageTopCards />
-            </FreeGuidesStyles>
+            <BlogPostPreviewList
+            title=""
+            data={blogData}
+            />
+        </FreeGuidesStyles>
         </Layout>
     )
 }
-export default FreeGuidesPage;
+
+export const query = graphql`
+    query BlogQuery {
+        allSanityPost(filter: {slug: {current: {ne: null}}}) {
+            edges {
+                node {
+                    slug {
+                        current
+                    }
+                    mainImage {
+                    alt
+                    asset {
+                        fluid(maxWidth: 1000) {
+                        ...GatsbySanityImageFluid
+                        }
+                    }
+                    }
+                    title
+                    seoTitle
+                    seoDescription
+                    _updatedAt
+                    _createdAt
+                    author {
+                    name
+                    mainImage {
+                        alt
+                        asset {
+                        fixed(width: 400) {
+                            ...GatsbySanityImageFixed
+                        }
+                        }
+                    }
+                    bio {
+                        _key
+                        _type
+                        style
+                        list
+                        _rawChildren
+                    }
+                    }
+                    categories {
+                    title
+                    }
+                }
+            }
+        }
+    }
+`;

@@ -23,6 +23,7 @@ const NewsletterStyles = styled.div`
         flex-direction: column;
         align-items: center;
         justify-items: center;
+        margin-top: 3rem;
     }
 
     .email {
@@ -39,6 +40,10 @@ const NewsletterStyles = styled.div`
     .error {
         color: red;
         padding: 15px 0;
+    }
+
+    .center {
+        text-align: center;
     }
 
 @media only screen
@@ -65,7 +70,7 @@ const SignUpSchema = Yup.object().shape({
         .required("Email address is required")
 });
 
-const Newsletter = (props) => {
+const Newsletter = () => {
     const submitForm = async (values) => {
         console.log(values);
         const { email } = values;
@@ -91,8 +96,8 @@ const Newsletter = (props) => {
                     onSubmit={submitForm}>
                         {(formik) => (
                             <Form>
-                                <h2>{props.formHeading}</h2>
-                                <p>{props.paragraph}</p>
+                                <h1 className="center">Web Development Tips to <span>Supercharge</span> Your Skills</h1>
+                                <p className="center">Once a week you'll get some practical web development tips and insights that will help you improve your skills.</p>
                                 <div className="form-inputs">
                                     <Field 
                                         name="email"
@@ -103,7 +108,7 @@ const Newsletter = (props) => {
                                         disabled={!formik.isValid || !formik.dirty}
                                         type="submit"
                                         className="primary">
-                                        Join free
+                                        Subscribe
                                     </button>
                                 </div>
                                 <ErrorMessage 

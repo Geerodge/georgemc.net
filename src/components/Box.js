@@ -1,5 +1,6 @@
 import React from "react";
-import { FaHandshake, FaMobileAlt, FaTools } from 'react-icons/fa';
+import { FaHandshake, FaMobileAlt } from 'react-icons/fa';
+import { AiOutlineMail } from 'react-icons/ai';
 
 const Box = ({ heading, description, icon }) => (
     
@@ -13,9 +14,9 @@ const Box = ({ heading, description, icon }) => (
                     return (
                         <FaMobileAlt size={50} />
                         )
-                } else if (icon === "tools") {
+                } else if (icon === "email") {
                     return (
-                        <FaTools size={50} />
+                        <AiOutlineMail size={50} />
                         )
                 }
             }

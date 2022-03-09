@@ -84,23 +84,23 @@ const Projects = () => (
         <div className="box-wrapper">
             <div className="box box__one">
                 <Box 
-                    icon="handshake"
-                    heading="Web Design You Can Trust"
-                    description="Using the latest tools and trends, I create websites that are blisteringly fast, accessible and great looking."
+                    icon="email"
+                    heading="The Primo Post"
+                    description="Practical web development tips and insights that will help you improve your skills."
                 />
             </div>
             <div className="box box__two">
                 <Box
                     icon="mobile"
-                    heading="Mobile and SEO Optimised"
-                    description="Every website I develop works seamlessly on mobile and tablets, whilst simultaneously being SEO optimised to ensure that your website is accessible by search engines."
+                    heading="Websites You Can Trust"
+                    description="Using the latest tools and trends, I create websites that are blisteringly fast, accessible and great looking."
                 />
             </div>
             <div className="box box__three">
             <Box
-                icon="tools"
-                heading="Troubleshooting and Maintenance"
-                description="I can help you troubleshoot your application or set up your website to ensure it's secure and available for users, giving you peace of mind to focus on what matters."
+                icon="handshake"
+                heading="Consultation &amp; Training"
+                description="Need advice or training for a new or existing project? No problem. Lets discuss how I can help you."
             />
             </div>
         </div>
