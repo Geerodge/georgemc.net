@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import Project from "./Project";
+import ImageTopCard from "./ImageTopCard";
 
-const ProjectsStyles = styled.div`
+const ImageTopCardsStyles = styled.div`
 
     margin: 4em 1em;
 
@@ -71,16 +71,15 @@ const ProjectsStyles = styled.div`
   
 `;
 
-const Projects = () => (
+const ImageTopCards = () => (
 
   // imgsrc name needs to match the file name and extension exactly.
-  // imgsrc needs to match here, in Project.js and in the components GraphQL query within /components/Images
+  // imgsrc needs to match here, in ImageTopCard.js and in the components GraphQL query within /components/Images
 
-    <ProjectsStyles>
-        <h2 id="projects">Projects</h2>
+    <ImageTopCardsStyles>
         <div className="item-wrapper">
             <div className="item one">
-                <Project
+                <ImageTopCard
                     heading="Cheeky Tea"
                     description="An online tea store and wholesale tea supplier."
                     link="https://cheekytea.co.uk"
@@ -89,7 +88,7 @@ const Projects = () => (
                 />
             </div>
             <div className="item two">
-                <Project
+                <ImageTopCard
                     heading="House Buy Fast"
                     description="A cash property buying company that purchase property UK wide."
                     link="https://housebuyfast.co.uk"
@@ -98,7 +97,7 @@ const Projects = () => (
                 />
             </div>
             <div className="item three">
-                <Project
+                <ImageTopCard
                     heading="The Tree Planters"
                     description="A UK tree planting charity that I'm a Trustee of."
                     link="http://thetreeplanters.georgemc.net"
@@ -107,17 +106,17 @@ const Projects = () => (
                 />
             </div>
             <div className="item four">
-                <Project
-                    heading="Sunny Worthing"
-                    description="A website promoting Worthing and the Sussex areas."
+                <ImageTopCard
+                    heading="My Web Tools"
+                    description="The tools I use for my freelance web development clients are a really important part of how I can offer so much value."
                     link="https://sunnyworthing.co.uk"
                     imgsrc="sunny-worthing.png"
                     alt="Sunny Worthing"
                 />
             </div>
         </div>
-    </ ProjectsStyles>
+    </ ImageTopCardsStyles>
   
 )
 
-export default Projects;
+export default ImageTopCards;

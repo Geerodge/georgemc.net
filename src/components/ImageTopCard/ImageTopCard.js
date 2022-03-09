@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import Cheekytea from "../Images/Cheekytea";
-import Housebuyfast from "../Images/Housebuyfast";
-import Treeplanters from "../Images/Treeplanters";
-import Sunnyworthing from "../Images/Sunnyworthing";
+import ImageOne from "../Images/Cheekytea";
+import ImageTwo from "../Images/Housebuyfast";
+import ImageThree from "../Images/Treeplanters";
+import ImageFour from "../Images/Sunnyworthing";
 
-const ProjectStyles = styled.div`
+const ImageTopCardStyles = styled.div`
 
     .box {
         background-color: var(--secondary);
@@ -65,27 +65,27 @@ const ProjectStyles = styled.div`
 
 `;
 
-const Project = ({ heading, description, link, imgsrc, alt }) => (
+const ImageTopCard = ({ heading, description, link, imgsrc, alt }) => (
 
-  <ProjectStyles>
+  <ImageTopCardStyles>
     <a href={link} target="_blank" rel="noreferrer">
         <div className="box">
             {(() => {
                 if (imgsrc === "cheeky-tea.png") {
                     return (
-                        <Cheekytea alt={alt} />
+                        <ImageOne alt={alt} />
                         )
                 } else if (imgsrc === "house-buy-fast.png") {
                     return (
-                        <Housebuyfast alt={alt} />
+                        <ImageTwo alt={alt} />
                         )
                 } else if (imgsrc === "the-tree-planters.png") {
                     return (
-                        <Treeplanters alt={alt} />
+                        <ImageThree alt={alt} />
                         )
                 } else {
                     return (
-                        <Sunnyworthing alt={alt} />
+                        <ImageFour alt={alt} />
                         )
                 }
             })()}
@@ -93,14 +93,14 @@ const Project = ({ heading, description, link, imgsrc, alt }) => (
                 <h3>{heading}</h3>
                 <p>{description}</p>
                 <p className="link">
-                    Visit website
+                    Read More
                     <span></span>
                 </p>
             </div>
         </div>
     </a>
-  </ ProjectStyles>
+  </ImageTopCardStyles>
   
 )
 
-export default Project;
+export default ImageTopCard;
