@@ -4,6 +4,7 @@ import styled from "styled-components";
 import axios from "axios";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import BlogPostPreviewList from "../components/blog/BlogPostPreviewList";
 
 const NewsletterStyles = styled.div`
 
@@ -15,6 +16,7 @@ const NewsletterStyles = styled.div`
         flex-direction: column;
         align-items: center;
         justify-items: center;
+        margin-bottom: 5em;
     }
 
     form .form-inputs {
@@ -46,6 +48,17 @@ const NewsletterStyles = styled.div`
         text-align: center;
     }
 
+    h2.heading {
+        font-size: 2.5rem;
+        text-align: center;
+        color: var(--tertiary);
+        padding: 0 1rem;
+        span {
+            font-style: italic;
+            text-decoration: underline;
+        }
+    }
+
 @media only screen
     and (min-width: 640px) {
 
@@ -70,7 +83,11 @@ const SignUpSchema = Yup.object().shape({
         .required("Email address is required")
 });
 
-const Newsletter = () => {
+
+export default function Newsletter({ data: { allSanityPost } }) {
+
+    const blogData = allSanityPost.edges;
+
     const submitForm = async (values) => {
         console.log(values);
         const { email } = values;
@@ -96,7 +113,8 @@ const Newsletter = () => {
                     onSubmit={submitForm}>
                         {(formik) => (
                             <Form>
-                                <h1 className="center">Web Development Tips to <span>Supercharge</span> Your Skills</h1>
+                                <h1 className="center">The Primo Post Newsletter</h1>
+                                <h2 className="center heading">Web Development Tips to <span>Supercharge</span> Your Skills</h2>
                                 <p className="center">Once a week you'll get some practical web development tips and insights that will help you improve your skills.</p>
                                 <div className="form-inputs">
                                     <Field 
@@ -119,9 +137,62 @@ const Newsletter = () => {
                             </Form>
                         )}
                 </Formik>
+                <h2 className="center heading">Previous Issues of The Primo Post</h2>
+                <BlogPostPreviewList
+                    title=""
+                    data={blogData}
+                />
             </NewsletterStyles>
         </Layout>
     )
 }
 
-export default Newsletter;
+// export default Newsletter;
+
+export const query = graphql`
+    query NewsletterQuery {
+        allSanityPost(filter: {categories: {elemMatch: {_id: {eq: "c51a69c0-7621-4520-a2d7-dae2fea525c9"}}}}) {
+            edges {
+                node {
+                    slug {
+                        current
+                    }
+                    mainImage {
+                    alt
+                    asset {
+                        fluid(maxWidth: 1000) {
+                        ...GatsbySanityImageFluid
+                        }
+                    }
+                    }
+                    title
+                    seoTitle
+                    seoDescription
+                    _updatedAt
+                    _createdAt
+                    author {
+                    name
+                    mainImage {
+                        alt
+                        asset {
+                        fixed(width: 400) {
+                            ...GatsbySanityImageFixed
+                        }
+                        }
+                    }
+                    bio {
+                        _key
+                        _type
+                        style
+                        list
+                        _rawChildren
+                    }
+                    }
+                    categories {
+                    title
+                    }
+                }
+            }
+        }
+    }
+`;

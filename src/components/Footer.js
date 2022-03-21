@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { FaGithub, FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { FaTwitter, FaLinkedin } from "react-icons/fa";
 import { SiMinutemailer } from "react-icons/si";
 import ReactRotatingText from "react-rotating-text";
 
@@ -30,7 +30,7 @@ const FooterStyles = styled.div`
     .react-rotating-text-cursor {
         animation: blinking-cursor 0.8s cubic-bezier(0.68, 0.01, 0.01, 0.99) 0s infinite;
     }
-  
+
     @keyframes blinking-cursor {
         0% {
             opacity: 0;
@@ -48,7 +48,7 @@ const Footer = () => {
     return (
         <FooterStyles>
             <footer>
-                <p className="love">Things I <span role="img" aria-label="Heart">&#x2764;&#xFE0F;</span> <ReactRotatingText items={[`Open Source`, `Nature`, `Web 3.0`, `Music`,`Ethereum`, `Wine`, `Learning and building new things`, `Dogs`, `The Beach`, `Gaming`]} eraseMode="erase" pause={2000} /></p>
+                <p className="love">Things I <span role="img" aria-label="Heart">&#x2764;&#xFE0F;</span> <ReactRotatingText items={[`Open Source`, `Nature`, `Surfing`, `Web 3.0`, `Music`,`Ethereum`, `Wine`, `Learning and building new things`, `Dogs`, `The Beach`, `Gaming`, `Snowboarding`]} eraseMode="erase" pause={2000} /></p>
                 © {new Date().getFullYear()} George McEntegart<br />
                 {/* <a href="https://github.com/Geerodge" target="_blank" rel="noreferrer">
                     <FaGithub className="icons" />

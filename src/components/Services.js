@@ -23,6 +23,26 @@ const CardStyles = styled.div`
         }
     }
 
+    .box__one,
+    .box__two,
+    .box__three {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h3,
+    p,
+    div {
+        width: 100%;
+    }
+
+    .cta {
+        text-align: center;
+    }
+
   /* For devices with width greater than or equal to 768px, like landscape tablets and laptops */
   @media only screen
     and (min-width: 768px) {
@@ -87,6 +107,8 @@ const Projects = () => (
                     icon="email"
                     heading="The Primo Post"
                     description="Practical web development tips and insights that will help you improve your skills."
+                    buttontext="Subscribe Now"
+                    buttonlink="/newsletter"
                 />
             </div>
             <div className="box box__two">
@@ -94,6 +116,8 @@ const Projects = () => (
                     icon="mobile"
                     heading="Websites You Can Trust"
                     description="Using the latest tools and trends, I create websites that are blisteringly fast, accessible and great looking."
+                    buttontext="Contact Me"
+                    buttonlink="/contact"
                 />
             </div>
             <div className="box box__three">
@@ -101,6 +125,8 @@ const Projects = () => (
                 icon="handshake"
                 heading="Consultation &amp; Training"
                 description="Need advice or training for a new or existing project? No problem. Lets discuss how I can help you."
+                buttontext="Contact Me"
+                buttonlink="/contact"
             />
             </div>
         </div>

@@ -230,7 +230,6 @@ function truncate(str, len) {
 const BlogPostPreviewList = (props) => (
 
     <BlogPostPreviewListStyles>
-        <h1>{props.title}</h1>
         <div className="container">
             {props.data.reverse().map((post, i) => (
                 <div className="post" key={post.toString()}>
@@ -258,7 +257,6 @@ const BlogPostPreviewList = (props) => (
             ))}
         </div>
     </BlogPostPreviewListStyles>
-
 
 )
 

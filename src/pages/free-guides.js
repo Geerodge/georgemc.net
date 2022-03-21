@@ -15,9 +15,9 @@ const FreeGuidesStyles = styled.div`
 
 `;
 
-export default function FreeGuidesPage({ data: { allSanityPost } }) {
+export default function Newsletter({ data: { allSanityPost } }) {
 
-const blogData = allSanityPost.edges;
+    const blogData = allSanityPost.edges;
 
     return (
         <Layout>
@@ -38,20 +38,20 @@ const blogData = allSanityPost.edges;
 }
 
 export const query = graphql`
-    query BlogQuery {
-        allSanityPost(filter: {slug: {current: {ne: null}}}) {
+    query FreeGuideQuery {
+        allSanityPost(filter: {categories: {elemMatch: {_id: {eq: "05948542-63c4-4c92-802f-892d8264ed8c"}}}}) {
             edges {
                 node {
                     slug {
                         current
                     }
                     mainImage {
-                    alt
-                    asset {
-                        fluid(maxWidth: 1000) {
-                        ...GatsbySanityImageFluid
+                        alt
+                        asset {
+                            fluid(maxWidth: 1000) {
+                            ...GatsbySanityImageFluid
+                            }
                         }
-                    }
                     }
                     title
                     seoTitle
@@ -77,7 +77,7 @@ export const query = graphql`
                     }
                     }
                     categories {
-                    title
+                        title
                     }
                 }
             }
