@@ -44,7 +44,7 @@ exports.createPages = async ({graphql, actions}) => {
                       mainImage {
                         alt
                         asset {
-                          fluid(maxWidth: 1000) {
+                          fluid(maxWidth: 1280) {
                             base64
                             aspectRatio
                             src
