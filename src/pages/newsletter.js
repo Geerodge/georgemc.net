@@ -5,6 +5,7 @@ import axios from "axios";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import BlogPostPreviewList from "../components/blog/BlogPostPreviewList";
+import Seo from "../components/Seo";
 
 const NewsletterStyles = styled.div`
 
@@ -107,6 +108,10 @@ export default function Newsletter({ data: { allSanityPost } }) {
     return (
         <Layout>
             <NewsletterStyles>
+                <Seo 
+                    title="The Primo Post Newsletter"
+                    description="Web development tips that will supercharge your skills."
+                />
                 <Formik
                     initialValues={{ email: "" }}
                     validationSchema={SignUpSchema}
