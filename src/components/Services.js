@@ -2,18 +2,18 @@ import React from "react";
 import styled from "styled-components";
 import Box from "./Box";
 
-const ProjectStyles = styled.div`
+const CardStyles = styled.div`
 
     margin: 3em 1em;
 
-    .item-wrapper {
+    .box-wrapper {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         gap: 1em;
     }
 
-    .item {
+    .box {
         background-color: var(--secondary);
         color: var(--white);
         padding: 1em;
@@ -23,23 +23,43 @@ const ProjectStyles = styled.div`
         }
     }
 
+    .box__one,
+    .box__two,
+    .box__three {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h3,
+    p,
+    div {
+        width: 100%;
+    }
+
+    .cta {
+        text-align: center;
+    }
+
   /* For devices with width greater than or equal to 768px, like landscape tablets and laptops */
   @media only screen
     and (min-width: 768px) {
 
-       .item-wrapper {
+       .box-wrapper {
             justify-content: space-evenly;
         }
 
-        .one {
+        .box__one {
             flex: 2;
         }
 
-        .two {
+        .box__two {
             flex: 2;
         }
 
-        .three {
+        .box__three {
             flex-wrap: wrap;
         } 
 
@@ -49,7 +69,7 @@ const ProjectStyles = styled.div`
     @media only screen 
         and (min-width: 992px) {
 
-        .item {
+        .box {
             box-shadow: 10px 10px rgba(85,122,149,.15);
             transition: all .4s ease;
             &:hover {
@@ -64,11 +84,11 @@ const ProjectStyles = styled.div`
     @media only screen 
         and (min-width: 1025px) {
 
-        .item-wrapper {
+        .box-wrapper {
             flex-wrap: nowrap;
         }
 
-        .item {
+        .box {
             box-shadow: 20px 20px rgba(85,122,149,.15);
             margin: .5em;
             flex: 1;
@@ -80,31 +100,37 @@ const ProjectStyles = styled.div`
 
 const Projects = () => (
 
-    <ProjectStyles>
-        <div className="item-wrapper">
-            <div className="item one">
+    <CardStyles>
+        <div className="box-wrapper">
+            <div className="box box__one">
                 <Box 
-                    icon="handshake"
-                    heading="Web Design You Can Trust"
-                    description="Using the latest tools and trends, I create websites that are blisteringly fast, accessible and great looking."
+                    icon="email"
+                    heading="The Primo Post"
+                    description="Practical web development tips and insights that will help you improve your skills."
+                    buttontext="Subscribe Now"
+                    buttonlink="/newsletter"
                 />
             </div>
-            <div className="item two">
+            <div className="box box__two">
                 <Box
                     icon="mobile"
-                    heading="Mobile and SEO Optimised"
-                    description="Every website I develop works seamlessly on mobile and tablets, whilst simultaneously being SEO optimised to ensure that your website is accessible by search engines."
+                    heading="Websites You Can Trust"
+                    description="Using the latest tools and trends, I create websites that are blisteringly fast, accessible and great looking."
+                    buttontext="Contact Me"
+                    buttonlink="/contact"
                 />
             </div>
-            <div className="item three">
+            <div className="box box__three">
             <Box
-                icon="tools"
-                heading="Troubleshooting and Maintenance"
-                description="I can help you troubleshoot your application or set up your website to ensure it's secure and available for users, giving you peace of mind to focus on what matters."
+                icon="handshake"
+                heading="Consultation &amp; Training"
+                description="Need advice or training for a new or existing project? No problem. Lets discuss how I can help you."
+                buttontext="Contact Me"
+                buttonlink="/contact"
             />
             </div>
         </div>
-    </ProjectStyles>
+    </CardStyles>
 
 );
 
