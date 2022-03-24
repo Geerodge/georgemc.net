@@ -6,6 +6,7 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import BlogPostPreviewList from "../components/blog/BlogPostPreviewList";
 import Seo from "../components/Seo";
+import seoImage from "../images/primo-post-newsletter.png"
 
 const NewsletterStyles = styled.div`
 
@@ -111,6 +112,7 @@ export default function Newsletter({ data: { allSanityPost } }) {
                 <Seo 
                     title="The Primo Post Newsletter"
                     description="Web development tips that will supercharge your skills."
+                    image={seoImage}
                 />
                 <Formik
                     initialValues={{ email: "" }}

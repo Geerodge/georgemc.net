@@ -6,7 +6,8 @@ module.exports = {
   siteMetadata: {
     title: `George McEntegart`,
     description: `Freelance web developer based in North Devon, UK.`,
-    author: `@geerodge`,
+    author: `geerodge`,
+    image: `${__dirname}/src/images/george-mcentegart.jpg`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
