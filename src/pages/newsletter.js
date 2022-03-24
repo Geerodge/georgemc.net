@@ -89,6 +89,7 @@ const SignUpSchema = Yup.object().shape({
 export default function Newsletter({ data: { allSanityPost } }) {
 
     const blogData = allSanityPost.edges;
+    const seoImage = `https://georgemc.net${seoImage}`
 
     const submitForm = async (values) => {
         console.log(values);
