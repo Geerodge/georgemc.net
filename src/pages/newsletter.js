@@ -8,6 +8,8 @@ import BlogPostPreviewList from "../components/blog/BlogPostPreviewList";
 import Seo from "../components/Seo";
 import seoImage from "../images/primo-post-newsletter.png"
 
+const seoImage = `https://georgemc.net${seoImage}`
+
 const NewsletterStyles = styled.div`
 
     margin: 2em 1em;
@@ -89,7 +91,6 @@ const SignUpSchema = Yup.object().shape({
 export default function Newsletter({ data: { allSanityPost } }) {
 
     const blogData = allSanityPost.edges;
-    const seoImage = `https://georgemc.net${seoImage}`
 
     const submitForm = async (values) => {
         console.log(values);
