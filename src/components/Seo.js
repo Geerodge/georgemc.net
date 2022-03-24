@@ -22,7 +22,7 @@ function Seo({ description, lang, meta, title, image }) {
 
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
-  const metaImage = image || site.siteMetadata.image
+  const metaImage = `https://georgemc.net` + image || site.siteMetadata.image
 
   return (
     <Helmet

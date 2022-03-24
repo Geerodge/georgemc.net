@@ -8,8 +8,6 @@ import BlogPostPreviewList from "../components/blog/BlogPostPreviewList";
 import Seo from "../components/Seo";
 import seoImage from "../images/primo-post-newsletter.png"
 
-const seoImage = `https://georgemc.net${seoImage}`
-
 const NewsletterStyles = styled.div`
 
     margin: 2em 1em;
