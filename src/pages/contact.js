@@ -3,6 +3,7 @@ import Layout from "../components/Layout";
 import Seo from "../components/Seo";
 import ContactForm from "../components/ContactForm";
 import styled from "styled-components";
+import seoImage from "../images/george-mcentegart.jpg"
 
 const ContactPageStyles = styled.div`
 
@@ -35,6 +36,7 @@ const ContactPage = () => (
       <Seo 
         title="Contact"
         description="I’m always open to ideas and new opportunities."
+        image={seoImage}
       />
       <h1>Say Hello <span className="wave" role="img" aria-label="Hand Waving">👋</span></h1>
       <p>I love to help people grow their businesses and projects. If you want to work together or need some help with a project, please contact me directly using the form below.</p>

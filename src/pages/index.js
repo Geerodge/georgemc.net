@@ -2,6 +2,7 @@ import React from "react";
 import Layout from "../components/Layout";
 import Seo from "../components/Seo";
 import About from "../components/About";
+import seoImage from "../images/george-mcentegart.jpg"
 
 const IndexPage = () => {
   return (
@@ -9,6 +10,7 @@ const IndexPage = () => {
       <Seo 
         title="Home"
         description="Practical web development tips and insights that will help you improve your skills."
+        image={seoImage}        
       />
       <About homepage={true} />
     </Layout>

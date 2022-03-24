@@ -4,6 +4,7 @@ import Layout from "../components/Layout";
 import Seo from "../components/Seo";
 import styled from "styled-components";
 import BlogPostPreviewList from "../components/blog/BlogPostPreviewList";
+import seoImage from "../images/george-mcentegart.jpg"
 
 const FreeGuidesStyles = styled.div`
 
@@ -25,6 +26,7 @@ export default function Newsletter({ data: { allSanityPost } }) {
             <Seo 
                 title="Free Guides for Beginner Web Developers"
                 description="Free guides and resources for beginner web developers."
+                image={seoImage}
             />
             <h1 className="center">Free Guides for Beginner Web Developers</h1>
             <p className="center">I'm on a journey to share what I know and create useful resources for web developers, especially for people just starting out in the industry. I'm continuously learning, but here are some guides that cover what I've learned so far.</p>
