@@ -121,8 +121,8 @@ export default function Newsletter({ data: { allSanityPost } }) {
                         {(formik) => (
                             <Form>
                                 <h1 className="center">The Primo Post Newsletter</h1>
-                                <h2 className="center heading">Tips to <span>Supercharge</span> Your Business</h2>
-                                <p className="center">Once a week you'll get some practical SEO, marketing website tips that will help you grow your business.</p>
+                                <h2 className="center heading">Tips to <span>Supercharge</span> Your Online Business</h2>
+                                <p className="center">Once a week you'll get an email with my latest tips and insights to grow your online business.</p>
                                 <div className="form-inputs">
                                     <Field 
                                         name="email"
@@ -144,11 +144,11 @@ export default function Newsletter({ data: { allSanityPost } }) {
                             </Form>
                         )}
                 </Formik>
-                <h2 className="center heading">Previous Issues of The Primo Post</h2>
+                {/* <h2 className="center heading">Previous Issues of The Primo Post</h2>
                 <BlogPostPreviewList
                     title=""
                     data={blogData}
-                />
+                /> */}
             </NewsletterStyles>
         </Layout>
     )
