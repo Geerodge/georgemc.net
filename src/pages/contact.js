@@ -35,11 +35,11 @@ const ContactPage = () => (
     <ContactPageStyles>
       <Seo 
         title="Contact"
-        description="I’m always open to ideas and new opportunities."
+        description="I love to help people grow their businesses and projects, contact me today to find out how I can help."
         image={seoImage}
       />
       <h1>Say Hello <span className="wave" role="img" aria-label="Hand Waving">👋</span></h1>
-      <p>I love to help people grow their businesses and projects. If you want to work together or need some help with a project, please contact me directly using the form below.</p>
+      <p>I love to help people grow their businesses and projects. If you want to work together or need some help and advice, please contact me directly using the form below.</p>
       <ContactForm />
     </ContactPageStyles>
   </Layout>

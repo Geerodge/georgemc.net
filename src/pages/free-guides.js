@@ -10,6 +10,11 @@ const FreeGuidesStyles = styled.div`
 
     margin: 2em 1em;
 
+    h1 {
+        max-width: 35ch;
+        margin: 0 auto;
+    }
+
     .center {
         text-align: center;
     }
@@ -25,11 +30,11 @@ export default function Newsletter({ data: { allSanityPost } }) {
             <FreeGuidesStyles>
             <Seo 
                 title="Free Guides for Beginner Web Developers"
-                description="Free guides and resources for beginner web developers."
+                description="Free guides, tools and resources to help your grow your business."
                 image={seoImage}
             />
-            <h1 className="center">Free Guides for Beginner Web Developers</h1>
-            <p className="center">I'm on a journey to share what I know and create useful resources for web developers, especially for people just starting out in the industry. I'm continuously learning, but here are some guides that cover what I've learned so far.</p>
+            <h1 className="center">Free Guides for Online Business Growth</h1>
+            <p className="center">I'm on a journey to share what I know and create useful resources to help you grow your business. I'm continuously learning, and here are some guides that cover a few things learned so far.</p>
             <BlogPostPreviewList
             title=""
             data={blogData}

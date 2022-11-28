@@ -48,7 +48,7 @@ const Footer = () => {
     return (
         <FooterStyles>
             <footer>
-                <p className="love">Things I <span role="img" aria-label="Heart">&#x2764;&#xFE0F;</span> <ReactRotatingText items={[`Open Source`, `Nature`, `Surfing`, `Web 3.0`, `Music`,`Ethereum`, `Wine`, `Learning and building new things`, `Dogs`, `The Beach`, `Gaming`, `Snowboarding`]} eraseMode="erase" pause={2000} /></p>
+                <p className="love">Things I <span role="img" aria-label="Heart">&#x2764;&#xFE0F;</span> <ReactRotatingText items={[`Open Source`, `Nature`, `Surfing`, `Web 3.0`, `Music`, `SEO`, `Ethereum`, `Wine`, `Learning and building new things`, `Dogs`, `marketing`, `The Beach`, `Gaming`, `Snowboarding`]} eraseMode="erase" pause={2000} /></p>
                 © {new Date().getFullYear()} George McEntegart<br />
                 {/* <a href="https://github.com/Geerodge" target="_blank" rel="noreferrer">
                     <FaGithub className="icons" />

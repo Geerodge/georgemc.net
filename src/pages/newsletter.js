@@ -111,7 +111,7 @@ export default function Newsletter({ data: { allSanityPost } }) {
             <NewsletterStyles>
                 <Seo 
                     title="The Primo Post Newsletter"
-                    description="Web development tips that will supercharge your skills."
+                    description="Practical SEO, marketing and website tips that will supercharge your business."
                     image={seoImage}
                 />
                 <Formik
@@ -121,8 +121,8 @@ export default function Newsletter({ data: { allSanityPost } }) {
                         {(formik) => (
                             <Form>
                                 <h1 className="center">The Primo Post Newsletter</h1>
-                                <h2 className="center heading">Web Development Tips to <span>Supercharge</span> Your Skills</h2>
-                                <p className="center">Once a week you'll get some practical web development tips and insights that will help you improve your skills.</p>
+                                <h2 className="center heading">Tips to <span>Supercharge</span> Your Business</h2>
+                                <p className="center">Once a week you'll get some practical SEO, marketing website tips that will help you grow your business.</p>
                                 <div className="form-inputs">
                                     <Field 
                                         name="email"

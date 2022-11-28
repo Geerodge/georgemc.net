@@ -106,7 +106,7 @@ const Projects = () => (
                 <Box 
                     icon="email"
                     heading="The Primo Post"
-                    description="Practical web development tips and insights that will help you improve your skills."
+                    description="Practical tips and insights that will help you improve you grow your business."
                     buttontext="Subscribe Now"
                     buttonlink="/newsletter"
                 />
@@ -115,7 +115,7 @@ const Projects = () => (
                 <Box
                     icon="mobile"
                     heading="Websites You Can Trust"
-                    description="Using the latest tools and trends, I create websites that are blisteringly fast, accessible and great looking."
+                    description="Using the latest tools and trends, I create and promote websites that are blisteringly fast, accessible and great looking."
                     buttontext="Contact Me"
                     buttonlink="/contact"
                 />

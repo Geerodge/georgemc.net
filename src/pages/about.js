@@ -10,7 +10,7 @@ const AboutPage = () => {
     <Layout>
       <Seo 
         title="About"
-        description="Freelance web developer based in North Devon, UK."
+        description="I love to help people grow their businesses and projects. Find out more about how I can help you."
         image={seoImage}
       />
       <About isHomePage={isHomePage} />

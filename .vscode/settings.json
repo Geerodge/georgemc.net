@@ -1,5 +1,10 @@
 {
     "cSpell.words": [
         "hotspot"
-    ]
+    ],
+    "workbench.colorCustomizations": {
+        "activityBar.background": "#073333",
+        "titleBar.activeBackground": "#0A4847",
+        "titleBar.activeForeground": "#F0FDFD"
+    }
 }

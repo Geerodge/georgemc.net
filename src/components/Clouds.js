@@ -274,8 +274,8 @@ const Hero = () => {
                 <div className="hero-text">
                     <h1>Hi, I'm George</h1>
                     <div>
-                        <h2>Web Development Tips to <span>Supercharge</span> Your Skills</h2>
-                        <p>Every week you'll get an email about my latest insights on becoming a better web developer.</p>
+                        <h2>Digital Marketing Tips to <span>Supercharge</span> Your Business</h2>
+                        <p>Every week you'll get an email with my latest tips and insights to grow your online business.</p>
                         <SignUpForm />
                     </div>
                     {/* <Link to="/contact" target="_blank" rel="noreferrer">
