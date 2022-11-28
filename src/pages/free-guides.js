@@ -34,7 +34,7 @@ export default function Newsletter({ data: { allSanityPost } }) {
                 image={seoImage}
             />
             <h1 className="center">Free Guides for Online Business Growth</h1>
-            <p className="center">I'm on a journey to share what I know and create useful resources to help you grow your business. I'm continuously learning, and here are some guides that cover a few things learned so far.</p>
+            <p className="center">I'm on a journey to share what I know and create useful resources to help you grow your business. I'm continuously learning, and here are some guides that cover a few things I've learned so far.</p>
             <BlogPostPreviewList
             title=""
             data={blogData}
