@@ -29,7 +29,7 @@ const BlogStyles = styled.div`
     }
 
     .featured-image {
-      max-height: 400px !important;
+      max-height: 400px;
     }
 /* 
     figure {
@@ -78,7 +78,7 @@ export default function BlogPosts({ pageContext: { data } }) {
             updatedAt={data._updatedAt}
           />
           <BlogImage
-            className="featured-image" 
+            containerClassName="featured-image"
             data={data}
           />
           <BlockContent
