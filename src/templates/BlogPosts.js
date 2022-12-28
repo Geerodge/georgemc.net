@@ -27,6 +27,10 @@ const BlogStyles = styled.div`
     figure {
       max-width: 100%;
     }
+
+    .featured-image .gatsby-image-wrapper {
+      max-height: 400px;
+    }
 /* 
     figure {
       text-align: center;
@@ -73,9 +77,11 @@ export default function BlogPosts({ pageContext: { data } }) {
             createdAt={data._createdAt}
             updatedAt={data._updatedAt}
           />
-          <BlogImage
-            data={data}
-          />
+          <div className="featured-image">
+            <BlogImage
+              data={data}
+            />
+          </div>
           <BlockContent
             blocks={data._rawBody}
             serializers={serializers}
