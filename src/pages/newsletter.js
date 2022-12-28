@@ -144,11 +144,11 @@ export default function Newsletter({ data: { allSanityPost } }) {
                             </Form>
                         )}
                 </Formik>
-                {/* <h2 className="center heading">Previous Issues of The Primo Post</h2>
+                <h2 className="center heading">Previous Issues of The Primo Post</h2>
                 <BlogPostPreviewList
                     title=""
                     data={blogData}
-                /> */}
+                />
             </NewsletterStyles>
         </Layout>
     )
