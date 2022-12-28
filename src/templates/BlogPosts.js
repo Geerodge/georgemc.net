@@ -27,6 +27,10 @@ const BlogStyles = styled.div`
     figure {
       max-width: 100%;
     }
+
+    .featured-image {
+      max-height: 400px !important;
+    }
 /* 
     figure {
       text-align: center;
@@ -73,7 +77,8 @@ export default function BlogPosts({ pageContext: { data } }) {
             createdAt={data._createdAt}
             updatedAt={data._updatedAt}
           />
-          <BlogImage 
+          <BlogImage
+            className="featured-image" 
             data={data}
           />
           <BlockContent
