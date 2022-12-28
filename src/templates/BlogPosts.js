@@ -77,10 +77,11 @@ export default function BlogPosts({ pageContext: { data } }) {
             createdAt={data._createdAt}
             updatedAt={data._updatedAt}
           />
-          <BlogImage
-            containerClassName="featured-image"
-            data={data}
-          />
+          <div className="featured-image">
+            <BlogImage
+              data={data}
+            />
+          </div>
           <BlockContent
             blocks={data._rawBody}
             serializers={serializers}
