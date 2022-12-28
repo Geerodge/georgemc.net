@@ -29,7 +29,7 @@ const BlogStyles = styled.div`
     }
 
     .gatsby-image-wrapper {
-      max-height: 400px;
+      max-height: 400px !important;
     }
 /* 
     figure {
