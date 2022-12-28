@@ -27,10 +27,6 @@ const BlogStyles = styled.div`
     figure {
       max-width: 100%;
     }
-
-    .gatsby-image-wrapper {
-      max-height: 400px !important;
-    }
 /* 
     figure {
       text-align: center;
