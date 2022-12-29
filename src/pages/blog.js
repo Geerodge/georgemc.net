@@ -29,12 +29,12 @@ export default function Newsletter({ data: { allSanityPost } }) {
         <Layout>
             <FreeGuidesStyles>
             <Seo 
-                title="Free Guides for Beginner Web Developers"
-                description="Free guides, tools and resources to help your grow your business."
+                title="SEO Marketing Blog For Online Business Owners"
+                description="Tips and strategies for improving your website's SEO, driving more traffic to your website and getting more sales."
                 image={seoImage}
             />
-            <h1 className="center">Blog</h1>
-            <p className="center">Here you'll find all my newsletters, free guides and articles. I write about growing your online business, marketing, SEO and analytics.</p>
+            <h1 className="center">SEO Marketing Blog</h1>
+            <p className="center">Welcome to my SEO marketing blog for online business owners! I'll be sharing tips and strategies for improving your website's SEO, driving more traffic to your website and getting more sales.</p>
             <BlogPostPreviewList
             title=""
             data={blogData}
@@ -45,7 +45,7 @@ export default function Newsletter({ data: { allSanityPost } }) {
 }
 
 export const query = graphql`
-    query FreeGuideQuery {
+    query BlogQuery {
         allSanityPost(filter: {categories: {elemMatch: {_id: {eq: "3603cf4d-9d4a-429e-b54e-3cd43132a1f3"}}}}) {
             edges {
                 node {
