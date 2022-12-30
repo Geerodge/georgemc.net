@@ -3,8 +3,14 @@ import Layout from "../components/Layout";
 import Seo from "../components/Seo";
 import About from "../components/About";
 import seoImage from "../images/george-mcentegart.jpg"
+import TagManager from 'react-gtm-module'
+
+const tagManagerArgs = {
+  gtmId: 'GTM-567BLT6'
+}
 
 const IndexPage = () => {
+  TagManager.initialize(tagManagerArgs)
   return (
     <Layout>
       <Seo 

@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
-import TagManager from 'react-gtm-module'
 
 function Seo({ description, lang, meta, title, image }) {
   const { site } = useStaticQuery(
@@ -20,14 +19,9 @@ function Seo({ description, lang, meta, title, image }) {
     `
   )
 
-  const tagManagerArgs = {
-    gtmId: 'GTM-567BLT6'
-  }
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
   const metaImage = `https://georgemc.net` + image || site.siteMetadata.image
-
-  TagManager.initialize(tagManagerArgs)
 
   return (
     <Helmet
