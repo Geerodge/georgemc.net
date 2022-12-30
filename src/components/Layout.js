@@ -4,6 +4,13 @@ import GlobalStyles from "../styles/GlobalStyles";
 import Nav from "./Nav";
 import Footer from "./Footer";
 import Clouds from "./Clouds";
+import TagManager from 'react-gtm-module'
+
+const tagManagerArgs = {
+    gtmId: 'GTM-567BLT6'
+}
+
+TagManager.initialize(tagManagerArgs)
 
 const LayoutStyles = styled.div`
 
