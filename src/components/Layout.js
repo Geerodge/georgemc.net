@@ -10,8 +10,6 @@ const tagManagerArgs = {
     gtmId: 'GTM-567BLT6'
 }
 
-TagManager.initialize(tagManagerArgs)
-
 const LayoutStyles = styled.div`
 
   .myGrid {
@@ -54,6 +52,8 @@ const LayoutStyles = styled.div`
 
 const Layout = ({ children }) => {
 
+  TagManager.initialize(tagManagerArgs)
+  
     return (
         <>
         <GlobalStyles />
