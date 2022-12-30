@@ -5,7 +5,7 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: `George McEntegart`,
-    description: `Freelance web developer based in North Devon, UK.`,
+    description: `Digital Marketing and business growth. I love to help people grow their businesses!`,
     author: `geerodge`,
     image: `${__dirname}/src/images/george-mcentegart.jpg`,
   },
