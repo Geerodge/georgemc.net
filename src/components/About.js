@@ -68,6 +68,7 @@ const About = (props) => {
                 <div className="item-wrapper__two">
                     <ImageMorph />
                 </div>
+                {homepage === true ? <h2>About Me</h2> : <h1>About Me</h1>}
                 <div className="item-wrapper__three">
                     <h2>How I Can Help You</h2>
                     <Services />

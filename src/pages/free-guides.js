@@ -29,7 +29,7 @@ export default function Newsletter({ data: { allSanityPost } }) {
         <Layout>
             <FreeGuidesStyles>
             <Seo 
-                title="Free Guides for Beginner Web Developers"
+                title="Free Guides to Grow Your Business"
                 description="Free guides, tools and resources to help your grow your business."
                 image={seoImage}
             />
